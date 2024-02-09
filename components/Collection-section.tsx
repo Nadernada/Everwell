@@ -11,13 +11,13 @@ const myFont = localFont({ src: '../public/RecklessNeue-Regular.woff2' })
 
 const Collection = () => {
   return (
-    <div className="px-12 flex flex-col items-center gap-y-14">
-      <h2 className={`${myFont.className} font-bold text-[40px]`}>Wellness Wonders: Explore Our Collection</h2>
+    <div className="md:px-12 flex flex-col items-center gap-y-14">
+      <h2 className={`${myFont.className} font-bold text-[24px] md:text-[40px]`}>Wellness Wonders: Explore Our Collection</h2>
         <motion.div
           initial={{ opacity: 0, scale: 0.5, y: '100px' }}
           whileInView={{ opacity: 1, scale: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="flex flex-row gap-x-12"
+          className="flex flex-col md:flex-row gap-y-12 md:gap-x-12"
         >
           {
             dummyData.map((item, i) => {
@@ -26,13 +26,13 @@ const Collection = () => {
                     group
                     flex
                     flex-col
-                    w-1/3
+                    md:w-1/3
                     rounded-lg
                     gap-y-2
                     p-6
                     bg-gradient-to-b
                     ${i == 0 ? 'from-sky-300'
-                      : i == 1 ? 'from-pink-300 scale-110'
+                      : i == 1 ? 'from-pink-300 md:scale-110'
                       : 'from-yellow-300'
                     }
                     to-transparent`

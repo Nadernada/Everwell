@@ -21,16 +21,16 @@ const Hero = () => {
     <div className="h-fit w-full flex flex-col bg-gradient-to-b from-sky-300 to-transparent relative overflow-clip mb-24">
       <Navbar />
 
-      <div className="flex flex-row w-full h-full justify-between items-center px-24 py-12">
+      <div className="flex flex-col md:flex-row w-full h-full justify-between md:items-center px-12 md:px-24 py-12">
         <motion.div
           initial={{ opacity: 0, scale: 0.5 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.7 }}
-          className="flex flex-col gap-y-6 w-1/3"
+          className="flex flex-col gap-y-6 md:w-1/3"
         >
           <h1 className={`text-[54px] leading-[66px] ${myFontMedium.className}`}>Nurturing Wellness,<br /> Nourishing Lives.</h1>
 
-          <p className="text-sm w-4/6 pb-8">Elevate Your Wellness Journey with EverWell, Where Mind, Body, and Spirit Unite for a Healthier You.</p>
+          <p className="text-sm md:w-4/6 pb-8">Elevate Your Wellness Journey with EverWell, Where Mind, Body, and Spirit Unite for a Healthier You.</p>
 
           <Button fill title="Shop Now" />
         </motion.div>
