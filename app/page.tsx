@@ -12,11 +12,6 @@ import SocialFeed from "@/components/SocialFeed-section";
 import SuccessStories from "@/components/SuccessStories-section";
 import TopProduct from "@/components/TopProduct-section";
 import Champions from "@/components/WellnessChampions-section";
-import localFont from 'next/font/local'
-
-
-export const myFont = localFont({ src: '../public/RecklessNeue-Regular.woff2' })
-export const myFontMedium = localFont({ src: '../public/RecklessNeue-Medium.woff2' })
 
 
 export default function Home() {
