@@ -10,8 +10,8 @@ const myFont = localFont({ src: '../public/RecklessNeue-Regular.woff2' })
 
 const dummyPics = [
   '/social1.png',
-  '/social2.png',
-  '/social3.png',
+  '/Social2.png',
+  '/Social3.png',
   '/social4.png',
 ]
 

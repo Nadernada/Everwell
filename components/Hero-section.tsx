@@ -25,7 +25,7 @@ const Hero = () => {
         <motion.div
           initial={{ opacity: 0, scale: 0.5 }}
           animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.5 }}
+          transition={{ duration: 0.7 }}
           className="flex flex-col gap-y-6 w-1/3"
         >
           <h1 className={`text-[54px] leading-[66px] ${myFontMedium.className}`}>Nurturing Wellness,<br /> Nourishing Lives.</h1>
@@ -38,7 +38,7 @@ const Hero = () => {
         <motion.div
           initial={{ opacity: 0, scale: 0.5}}
           animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.2 }}
+          transition={{ duration: 0.5, delay: 0.7 }}
           className="flex flex-row gap-x-6 flex-1 relative"
         >
           <Swiper
@@ -61,7 +61,7 @@ const Hero = () => {
                 <motion.div
                   initial={{ opacity: 0, scale: 0.5, y: '100px' }}
                   animate={{ opacity: 1, scale: 1, y: 0 }}
-                  transition={{ duration: 0.5 }}
+                  transition={{ duration: 0.5, delay: 0.8 }}
                   className="w-[70px] h-[160px] "
                 >
                   <Image src='/Everwell Bottle No Shadow Gold.png' width={65} height={165} alt="bottle" className="object-fill" />
@@ -76,7 +76,7 @@ const Hero = () => {
                   <motion.div
                     initial={{ opacity: 0, scale: 0.5, y: '100px' }}
                     animate={{ opacity: 1, scale: 1, y: 0 }}
-                    transition={{ duration: 0.6 }}
+                    transition={{ duration: 0.5, delay: 0.9 }}
                     className="w-[50px] h-[160px]"
                   >
                     <Image src='/Everwell Bottle No Shadow.png' width={80} height={190} alt="bottle" className="object-fill" />
