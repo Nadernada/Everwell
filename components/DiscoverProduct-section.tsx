@@ -2,9 +2,11 @@
 
 import Image from "next/image"
 import Button from "./Button"
-import { myFont } from "@/app/page"
-
+import localFont from 'next/font/local'
 import { motion } from "framer-motion"
+
+
+const myFont = localFont({ src: '../public/RecklessNeue-Regular.woff2' })
 
 const DiscoverProduct = () => {
   return (

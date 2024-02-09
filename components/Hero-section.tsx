@@ -3,7 +3,7 @@
 import Image from "next/image"
 import Button from "./Button"
 import Navbar from "./Navbar"
-import { myFont, myFontMedium } from "@/app/page"
+import localFont from 'next/font/local'
 
 import { Swiper, SwiperSlide } from "swiper/react"
 import { Navigation } from "swiper/modules"
@@ -11,6 +11,8 @@ import 'swiper/css'
 import 'swiper/css/navigation'
 import { motion } from "framer-motion"
 
+const myFont = localFont({ src: '../public/RecklessNeue-Regular.woff2' })
+const myFontMedium = localFont({ src: '../public/RecklessNeue-Medium.woff2' })
 
 const Hero = () => {
 

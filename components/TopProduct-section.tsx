@@ -2,7 +2,10 @@
 
 import Image from "next/image"
 import Button from "./Button"
-import { myFont } from "@/app/page"
+import localFont from 'next/font/local'
+
+
+const myFont = localFont({ src: '../public/RecklessNeue-Regular.woff2' })
 
 import { Swiper, SwiperSlide } from "swiper/react"
 import { Navigation, Pagination } from "swiper/modules"

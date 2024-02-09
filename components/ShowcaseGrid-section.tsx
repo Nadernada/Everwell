@@ -1,10 +1,13 @@
 'use client'
 
 import Image from "next/image"
-import { myFontMedium } from "@/app/page"
 import Button from "./Button"
+import localFont from 'next/font/local'
 
 import { motion } from "framer-motion"
+
+const myFontMedium = localFont({ src: '../public/RecklessNeue-Medium.woff2' })
+
 
 const Showcase = () => {
   return (

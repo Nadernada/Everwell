@@ -1,10 +1,9 @@
 'use client'
 
-import { myFont } from "@/app/page"
 import Button from "./Button"
 import { dummyFavoriteData } from "@/constants"
 import Image from "next/image"
-
+import localFont from 'next/font/local'
 import { Swiper, SwiperSlide } from "swiper/react"
 import { Navigation } from "swiper/modules"
 import 'swiper/css'
@@ -12,6 +11,7 @@ import 'swiper/css/navigation'
 
 import { motion } from "framer-motion"
 
+const myFont = localFont({ src: '../public/RecklessNeue-Regular.woff2' })
 
 const CustomerFavorites = () => {
   return (

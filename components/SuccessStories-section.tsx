@@ -1,10 +1,13 @@
 'use client'
 
 import Image from "next/image"
-import { myFont } from "@/app/page"
 import Button from "./Button"
+import localFont from 'next/font/local'
 
 import { motion } from "framer-motion"
+
+const myFont = localFont({ src: '../public/RecklessNeue-Regular.woff2' })
+
 
 const people = [
   '/Person3Big.png',

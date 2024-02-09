@@ -1,10 +1,12 @@
 'use client'
 
 import Image from "next/image"
-import { myFont } from "@/app/page"
 import Button from "./Button"
 import { dummyData } from "@/constants"
 import { motion } from "framer-motion"
+import localFont from 'next/font/local'
+
+const myFont = localFont({ src: '../public/RecklessNeue-Regular.woff2' })
 
 
 const Collection = () => {

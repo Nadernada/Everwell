@@ -1,11 +1,14 @@
 'use client'
 
 import Image from "next/image"
-import { myFont } from "@/app/page"
 import Button from "./Button"
 import { dummyReviews } from "@/constants"
-
+import localFont from 'next/font/local'
 import { motion } from 'framer-motion'
+
+
+const myFont = localFont({ src: '../public/RecklessNeue-Regular.woff2' })
+const myFontMedium = localFont({ src: '../public/RecklessNeue-Medium.woff2' })
 
 const dummyBanner = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 

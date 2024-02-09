@@ -2,8 +2,11 @@
 
 import Image from "next/image"
 import Button from "./Button"
-import { myFont } from "@/app/page"
 import { motion } from 'framer-motion'
+import localFont from 'next/font/local'
+
+
+const myFont = localFont({ src: '../public/RecklessNeue-Regular.woff2' })
 
 const dummyPics = [
   '/social1.png',
