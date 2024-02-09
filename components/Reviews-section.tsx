@@ -14,14 +14,14 @@ const dummyBanner = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 const Reviews = () => {
   return (
     <>
-      <div className="w-fit h-[75px] flex flex-row gap-x-8 bg-[#EFE5C3] my-24 relative overflow-hidden">
+      <div className="w-full h-[75px] flex flex-row gap-x-4 bg-[#EFE5C3] my-24 relative overflow-hidden">
         {
           dummyBanner.map(num => (
             <motion.div
-              animate={{ x: ['-100px', '1px']}}
-              transition={{ repeat: Infinity, duration: 5}}
+              animate={{ x: '-100px'}}
+              transition={{ repeat: Infinity, duration: 10}}
               key={num}
-              className="w-[150px] flex flex-row gap-x-8 items-center "
+              className="w-[150px] flex flex-row gap-x-4 items-center "
             >
                 <Image src='/Everwell Bottle No Shadow.png' width={18} height={57} alt="bottle" className="w-[18px] h-[57px]" />
                 <Image src='/Logo.png' width={96} height={24} alt="logo" className="w-[96px] h-[24px]" />

@@ -14,6 +14,13 @@ const helpLinks = [
   'Terms & Conditions',
   'Privacy Policy'
 ]
+const paymentMethods = [
+  '/icons/Mastercard.png',
+  '/icons/Visa.png',
+  '/icons/G Pay.png',
+  '/icons/ApplePay.png',
+  '/icons/Paypal.png'
+]
 
 const Footer = () => {
   return (
@@ -68,11 +75,13 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row gap-y-4 justify-between py-4">
           <p className="text-xs font-thin">Copyright 2023 EverWell. AllRights Reserved.</p>
           <div className="flex flex-row gap-x-2">
-            <div className="w-12 h-8 bg-white rounded-lg" />
-            <div className="w-12 h-8 bg-white rounded-lg" />
-            <div className="w-12 h-8 bg-white rounded-lg" />
-            <div className="w-12 h-8 bg-white rounded-lg" />
-            <div className="w-12 h-8 bg-white rounded-lg" />
+            {
+              paymentMethods.map(src => (
+                <div key={src} className="w-12 h-8 bg-white rounded-lg flex justify-center items-center">
+                  <Image src={src} alt="payment" width={27} height={9} />
+                </div>                
+              ))
+            }
           </div>
         </div>
       </div>
