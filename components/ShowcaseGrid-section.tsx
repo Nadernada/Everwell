@@ -15,11 +15,11 @@ const Showcase = () => {
       initial={{ opacity: 0, scale: 0.5 }}
       whileInView={{ opacity: 1, scale: 1 }}
       transition={{ duration: 0.5 }}
-      className="my-12 mx-24 rounded-3xl grid grid-cols-2 bg-[#eaeaea]"
+      className="my-12 md:mx-24 rounded-3xl grid grid-cols-2 bg-[#eaeaea]"
     >
-      <div className="p-24 flex flex-col justify-center gap-y-12">
-        <h5 className={`text-[38px] leading-[46px] text-primary ${myFontMedium.className}`}>A Wellness Revolution in Liquid Form</h5>
-        <p className="text-[17] w-11/12">Step into a wellness revolution with EverWell's liquid vitamins. We're redefining the way you nurture your health, one dropper at a time. Our expertly blended formulas target your mind, body, and spirit, providing support where you need it most. Easy to use, easy to love. </p>
+      <div className="p-8 md:p-24 flex flex-col justify-center gap-y-4 md:gap-y-12">
+        <h5 className={`text-[24px] md:text-[38px] leading-[32px] md:leading-[46px] text-primary ${myFontMedium.className}`}>A Wellness Revolution in Liquid Form</h5>
+        <p className="text-[14px] md:text-[17px] w-11/12">Step into a wellness revolution with EverWell's liquid vitamins. We're redefining the way you nurture your health, one dropper at a time. Our expertly blended formulas target your mind, body, and spirit, providing support where you need it most. Easy to use, easy to love. </p>
         <Button title="Shop Now" fill />
       </div>
       <Image src='/grid-pic1.png' alt="product" width={665} height={625} className="ms-auto" />

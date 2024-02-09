@@ -18,7 +18,7 @@ const Champions = () => {
         whileInView={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.5 }}
       >
-        <Image src='/champions-left.png' alt="champions" width={412} height={150} className="h-[170px]"/>
+        <Image src='/champions-left.png' alt="champions" width={412} height={150} className="h-[100px] md:h-[170px]"/>
       </motion.div>
 
       <motion.div
@@ -27,8 +27,8 @@ const Champions = () => {
         transition={{ duration: 0.5 }}
         className="relative flex flex-col items-center gap-y-10 w-1/6"
       >
-        <Image src='/championsText-droplet.png' alt="droplet" width={60} height={50} className="absolute -right-16 bottom-24" />
-        <h2 className={`${myFont.className} text-[56px] leading-[64px] text-center text-primary`}>Meet our Wellness Champions</h2>
+        <Image src='/championsText-droplet.png' alt="droplet" width={60} height={50} className="hidden md:absolute -right-16 bottom-24" />
+        <h2 className={`${myFont.className} text-[42px] md:text-[56px] leading-[50px] md:leading-[64px] text-center text-primary`}>Meet our Wellness Champions</h2>
         <Button title="View Reviews" fill />
       </motion.div>
 
@@ -37,7 +37,7 @@ const Champions = () => {
         whileInView={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.5 }}
       >
-        <Image src='/champions-right.png' alt="champions" width={412} height={150} className="h-[170px]"/>
+        <Image src='/champions-right.png' alt="champions" width={412} height={150} className="h-[100px] md:h-[170px]"/>
       </motion.div>
     </div>
   )

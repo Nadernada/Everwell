@@ -24,9 +24,9 @@ const SuccessStories = () => {
       transition={{ duration: 0.5 }}
       className="flex flex-col items-center text-center gap-y-4 py-24"
     >
-      <h3 className={`${myFont.className} text-[44px] text-primary font-bold`}>Success Stories</h3>
-      <p className="text-sm w-4/12">Read the real-life experiences of individuals who've embraced the EverWell journey and transformed their wellness.</p>
-      <div className="mt-8 grid grid-cols-4">
+      <h3 className={`${myFont.className}  text-[32px] md:text-[44px] text-primary font-bold`}>Success Stories</h3>
+      <p className="text-sm w-8/12 md:w-4/12">Read the real-life experiences of individuals who've embraced the EverWell journey and transformed their wellness.</p>
+      <div className="mt-8 grid grid-cols-2 md:grid-cols-4">
         {
           people.map((item, i) => (
             <motion.div

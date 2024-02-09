@@ -16,17 +16,17 @@ const myFont = localFont({ src: '../public/RecklessNeue-Regular.woff2' })
 const CustomerFavorites = () => {
   return (
     <div className="relative flex flex-col w-full items-center text-center gap-y-24 py-24">
-      <Image src='/championsText-droplet.png' alt="droplet" width={60} height={50} className="absolute left-[62%] top-20" />
-      <h3 className={`${myFont.className} text-[44px] text-primary font-bold`}>Customer Favorites</h3>
+      <Image src='/championsText-droplet.png' alt="droplet" width={60} height={50} className="absolute left-[75%] md:left-[62%] top-20" />
+      <h3 className={`${myFont.className} text-[32px] md:text-[44px] text-primary font-bold`}>Customer Favorites</h3>
 
       <Swiper
         spaceBetween={50}
         slidesPerView={1}
         modules={[Navigation]}
         navigation
-        className="w-1/2"
+        className="md:w-1/2 overflow-visible w-full"
       >
-        <SwiperSlide className="flex flex-row gap-x-48 relative justify-center mx-auto">
+        <SwiperSlide className="flex flex-row gap-x-12 md:gap-x-48 relative justify-center mx-auto">
           {
             dummyFavoriteData.map((item, i) => {
               return (
