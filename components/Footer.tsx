@@ -1,6 +1,19 @@
 import Image from "next/image"
 
-
+const companyLinks = [
+  'About',
+  'Shop',
+  'Blog',
+  'Cart',
+  'Affiliate program',
+]
+const helpLinks = [
+  'Help Center',
+  'Contact Us',
+  'Community',
+  'Terms & Conditions',
+  'Privacy Policy'
+]
 
 const Footer = () => {
   return (
@@ -25,19 +38,19 @@ const Footer = () => {
         <div className="flex flex-row justify-center gap-x-24">
           <div className="flex flex-col gap-y-4">
             <p className="uppercase text-lg">company</p>
-            <p className="text-sm font-thin text-gray-300 hover:text-gray-500 cursor-pointer">About</p>
-            <p className="text-sm font-thin text-gray-300 hover:text-gray-500 cursor-pointer">Shop</p>
-            <p className="text-sm font-thin text-gray-300 hover:text-gray-500 cursor-pointer">Blog</p>
-            <p className="text-sm font-thin text-gray-300 hover:text-gray-500 cursor-pointer">Cart</p>
-            <p className="text-sm font-thin text-gray-300 hover:text-gray-500 cursor-pointer">Affiliate Program</p>
+            {
+              companyLinks.map(link => (
+                <p key={link} className="text-sm font-thin text-gray-300 hover:text-gray-500 cursor-pointer">{link}</p>
+              ))
+            }
           </div>
           <div className="flex flex-col gap-y-4">
             <p className="uppercase text-lg">Help</p>
-            <p className="text-sm font-thin text-gray-300 hover:text-gray-500 cursor-pointer">Help Center</p>
-            <p className="text-sm font-thin text-gray-300 hover:text-gray-500 cursor-pointer">Contact Us</p>
-            <p className="text-sm font-thin text-gray-300 hover:text-gray-500 cursor-pointer">Community</p>
-            <p className="text-sm font-thin text-gray-300 hover:text-gray-500 cursor-pointer">Terms & Conditions</p>
-            <p className="text-sm font-thin text-gray-300 hover:text-gray-500 cursor-pointer">Privacy Policy</p>
+            {
+              companyLinks.map(link => (
+                <p key={link} className="text-sm font-thin text-gray-300 hover:text-gray-500 cursor-pointer">{link}</p>
+              ))
+            }
           </div>
           <div className="flex flex-col gap-y-4">
             <p className="uppercase text-lg">FAQ</p>
