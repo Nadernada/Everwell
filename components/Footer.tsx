@@ -5,7 +5,7 @@ import Image from "next/image"
 const Footer = () => {
   return (
     <div className="w-full bg-primary text-white p-20 mt-12 flex flex-col rounded-t-3xl">
-      <div className="flex flex-row justify-between pb-12">
+      <div className="flex flex-col md:flex-row gap-y-12 justify-between pb-12">
         <div className="flex flex-col gap-y-4">
           <Image src='/LogoBig.svg' alt="logo" width={263} height={66} />
           <p className="text-lg">Elevate your inner wellness</p>
@@ -52,7 +52,7 @@ const Footer = () => {
       <div className="w-full flex flex-col">
         <div className="h-[1px] bg-white w-full"/>
 
-        <div className="flex flex-row justify-between py-4">
+        <div className="flex flex-col md:flex-row gap-y-4 justify-between py-4">
           <p className="text-xs font-thin">Copyright 2023 EverWell. AllRights Reserved.</p>
           <div className="flex flex-row gap-x-2">
             <div className="w-12 h-8 bg-white rounded-lg" />

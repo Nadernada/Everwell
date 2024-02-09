@@ -23,9 +23,9 @@ const SocialFeed = () => {
       transition={{ duration: 0.5}}
       className="w-full flex flex-col items-center gap-y-12 py-12"
     >
-      <h2 className={`text-[38px] leading-[46px] text-primary ${myFont.className}`}>Stay Connected: Dive into Our Social Media Feed</h2>
+      <h2 className={` text-[32px] md:text-[38px] leading-[40px] md:leading-[46px] text-primary ${myFont.className}`}>Stay Connected: Dive into Our Social Media Feed</h2>
 
-      <div className="flex flex-row gap-x-3 items-center">
+      <div className="flex flex-row md:gap-x-3 items-center">
         {
           dummyPics.map((pic, i) => (
             <motion.div
@@ -35,7 +35,7 @@ const SocialFeed = () => {
               className="group relative"
               key={i}
             >
-              <Image src={pic} alt='social' width={383} height={313} className="relative z-0 w-[383px] h-[313px]"/>
+              <Image src={pic} alt='social' width={383} height={313} className="relative z-0 w-[283px] h-[190px] md:w-[383px] md:h-[313px]"/>
               <div className="group-hover:opacity-100 opacity-0 bg-gray-500/40 absolute top-0 left-0 z-10 w-full h-full flex items-end justify-center pb-6 transition-all">
                 <Button title="Read More" className="bg-white text-primary outline-none cursor-pointer" />
               </div>

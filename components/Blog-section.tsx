@@ -22,7 +22,7 @@ const dummyBlogs = [
 
 const Blog = () => {
   return (
-    <div className="w-full flex flex-row px-24 py-12 mb-24 gap-x-12 justify-center">
+    <div className="w-full flex flex-col md:flex-row px-8 md:px-24 py-12 mb-24 gap-y-12 md:gap-x-12 justify-center">
       {
         dummyBlogs.map((blog) => (
           <motion.div
@@ -30,9 +30,9 @@ const Blog = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
             key={blog.title}
-            className="relative w-3/12"
+            className="relative w-full md:w-3/12 flex justify-center"
           >
-            <Image src={blog.src} alt="blog-post" width={375} height={360} />
+            <Image src={blog.src} alt="blog-post" width={375} height={360} className="w-10/12 h-full md:w-[375px] md:h-[360px]" />
 
             <motion.div
               initial={{ opacity: 0, x: '-50%', y: '100px' }}

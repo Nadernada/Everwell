@@ -15,7 +15,7 @@ const Contact = () => {
       initial={{ opacity: 0, scale: 0 }}
       whileInView={{ opacity: 1, scale: 1 }}
       transition={{ duration: 0.5}}
-      className="flex flex-row items-center gap-x-4 m-24 h-[480px]"
+      className="flex flex-col md:flex-row items-center gap-y-4 md:gap-x-4 m-8 md:m-24 md:h-[480px]"
     >
       <Image src='/cta.png' alt="contact" width={600} height={480} />
 
