@@ -30,6 +30,7 @@ const SocialFeed = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: i * 0.2 }}
               className="group relative"
+              key={i}
             >
               <Image src={pic} alt='social' width={383} height={313} className="relative z-0 w-[383px] h-[313px]"/>
               <div className="group-hover:opacity-100 opacity-0 bg-gray-500/40 absolute top-0 left-0 z-10 w-full h-full flex items-end justify-center pb-6 transition-all">
