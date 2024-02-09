@@ -20,7 +20,7 @@ const Collection = () => {
           {
             dummyData.map((item, i) => {
               return (
-                  <div className={`
+                  <div key={i} className={`
                     group
                     flex
                     flex-col
