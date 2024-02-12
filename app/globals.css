@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+
 html, body {
   width: 100%;
 }
@@ -24,6 +25,44 @@ main {
   width: 440px !important;
 }
 
-.swiper-button-lock {
-  display: block !important;
+.swiper-button-next, .swiper-button-prev {
+  color: #5B5B5B !important;
+  width: 15px !important;
+  height: 28px !important;
+}
+
+
+.swiper-button-next.me-6::after {
+  content: '' !important;
+
+}
+
+.main-product {
+  width: 440px !important;
+  height: 460px !important;
+}
+
+.fill-available {
+  width: -webkit-fill-available;
+  width: 100%;
+}
+
+.banner-animation {
+  animation: moveLeftRight 4s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite alternate; /* animation name, duration, timing function, iteration count, direction */
+}
+
+@keyframes moveLeftRight {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: 50px; /* Moves the div to the right end of its container */
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .main-product {
+    width: 340px !important;
+    height: 360px !important;
+  }
 }

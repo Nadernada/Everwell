@@ -1,34 +1,66 @@
 'use client'
 
 import Button from "./Button"
-import { dummyFavoriteData } from "@/constants"
+import { dummyData, dummyFavoriteData } from "@/constants"
 import Image from "next/image"
 import localFont from 'next/font/local'
-import { Swiper, SwiperSlide } from "swiper/react"
-import { Navigation } from "swiper/modules"
 import 'swiper/css'
 import 'swiper/css/navigation'
 
 import { motion } from "framer-motion"
+import { useState } from "react"
 
 const myFont = localFont({ src: '../public/RecklessNeue-Regular.woff2' })
 
 const CustomerFavorites = () => {
-  return (
-    <div className="relative flex flex-col w-full items-center text-center gap-y-24 py-24">
-      <Image src='/championsText-droplet.png' alt="droplet" width={60} height={50} className="absolute left-[75%] md:left-[62%] top-20" />
-      <h3 className={`${myFont.className} text-[32px] md:text-[44px] text-primary font-bold`}>Customer Favorites</h3>
 
-      <Swiper
-        spaceBetween={50}
-        slidesPerView={1}
-        modules={[Navigation]}
-        navigation
-        className="md:w-1/2 overflow-visible w-full"
-      >
-        <SwiperSlide className="flex flex-row gap-x-12 md:gap-x-48 relative justify-center mx-auto">
+  const [isActive, setIsActive] = useState(0)
+  const [products, setProducts] = useState(dummyFavoriteData)
+
+  const handleNext = () => {
+    setProducts(sortFromIndex(dummyFavoriteData, isActive))
+
+  }
+  const handlePrev = () => {
+    setProducts(sortFromIndex(dummyFavoriteData, isActive))
+
+  }
+
+  function sortFromIndex(array: any, startIndex: number) {
+    // Check if the startIndex is within the bounds of the array
+    console.log(startIndex);
+    if(isActive === 2) {
+      setIsActive(0)
+    } else {
+      setIsActive(isActive + 1)
+    }
+    
+    if (startIndex < 0 || startIndex > array.length - 1) {
+        console.error("Start index is out of bounds.");
+        return array; // Return the original array unchanged
+    }
+
+    // Slice the array into two parts: elements to be sorted and elements before startIndex
+    const toSort = array.slice(startIndex);
+    const beforeStart = array.slice(0, startIndex);
+
+    // Sort the middle part
+    toSort.sort((a: any, b: any) => a - b);
+    
+    return toSort.concat(beforeStart);
+  }
+
+  return (
+    <div className="relative flex flex-col w-full items-center text-center gap-y-4 md:gap-y-24 md:py-24">
+      <Image src='/championsText-droplet.png' alt="droplet" width={60} height={50} className="hidden md:inline absolute left-[75%] md:left-[62%] top-20" />
+      <h3 className={`${myFont.className} text-[28px] md:text-[44px] text-primary font-bold mb-12`}>Customer Favorites</h3>
+
+
+        <div className="w-[70%] flex flex-row gap-x-12 md:gap-x-48 relative justify-center mx-auto">
+          <div className="swiper-button-prev mr-32" onClick={handlePrev} />
+
           {
-            dummyFavoriteData.map((item, i) => {
+            products.map((item, i) => {
               return (
                   <motion.div
                     key={item.title}
@@ -39,32 +71,33 @@ const CustomerFavorites = () => {
                     group
                     flex
                     flex-col
-                    w-5/12
+                    w-[350px]
                     rounded-lg
                     gap-y-2
                     p-6
                     bg-gradient-to-b
-                    ${i == 0 ? 'from-sky-300 -rotate-12 scale-75'
-                      : i == 1 ? 'from-pink-300 scale-110 absolute top-0 left-1/2 -translate-x-1/2 z-10'
-                      : 'from-yellow-300 rotate-12 scale-75'
+                    ${item.title == 'Lung Detox: "Lung Cleanser"' ? 'from-sky-300 '
+                      : item.title == 'Focus: "Mind Sharpen"' ? 'from-pink-300'
+                      : 'from-yellow-300'
                     }
+                    ${i==1 ? ' scale-110 absolute top-0 left-1/2 -translate-x-1/2 z-10' : i==0 ? '-rotate-12 scale-75' : ' rotate-12 scale-75'}
                     to-white
                     shadow-md
                     shadow-gray-200`
                   }>
-                    <div className="w-full h-[270px] relative flex items-center justify-center">
+                    <div className="w-full h-[270px] relative flex items-center justify-center mb-4">
                       {
-                        i == 1 && (
+                        item.title == 'Focus: "Mind Sharpen"' && (
                           <>
                             <Image src='/Mask group.png' width={320} height={240} className="h-full w-auto absolute top-0 left-0 z-0 transition-all"  alt="bottle" /> 
                             <Image src='/droplet-transparent.png' width={320} height={240} className="scale-125 h-full w-auto absolute top-0 left-0 z-0 transition-all"  alt="bottle" />
                           </>
                         )
                       }
-                      <Image src={item.src} width={320} height={240} className="h-full w-auto relative z-10 transition-all" alt="bottle" /> 
+                      <Image src={item.src} width={320} height={240} className={`${i == 1 && '-rotate-12'} h-full w-auto relative z-10 transition-all`} alt="bottle" /> 
                     </div>
 
-                    <p className="font-semibold">{item.title}</p>
+                    <p className="font-bold text-start">{item.title}</p>
                     <div className="flex flex-row gap-x-2">
                       <Image src='/stars.svg' alt="stars" width={75} height={13} />
                       <p>4.5/5</p>
@@ -84,8 +117,8 @@ const CustomerFavorites = () => {
               )
             })
           }
-        </SwiperSlide>
-      </Swiper>
+            <div className="swiper-button-next ml-24" onClick={handleNext} />
+        </div>
 
       <Button title="View All" fill />
     </div>

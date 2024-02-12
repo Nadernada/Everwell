@@ -7,25 +7,24 @@ import localFont from 'next/font/local'
 import { motion } from 'framer-motion'
 
 
-const myFont = localFont({ src: '../public/RecklessNeue-Regular.woff2' })
+const myFont = localFont({ src: '../public/RecklessNeue-Medium.woff2' })
 
-const dummyBanner = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+const dummyBanner = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
 
 const Reviews = () => {
   return (
     <>
-      <div className="w-full h-[75px] flex flex-row gap-x-4 bg-[#EFE5C3] my-24 relative overflow-hidden">
+      <div className="w-fit-max h-[75px] flex flex-row gap-x-4 bg-[#EFE5C3] my-24 relative">
+
         {
           dummyBanner.map(num => (
-            <motion.div
-              animate={{ x: '-100px'}}
-              transition={{ repeat: Infinity, duration: 10}}
+            <div
               key={num}
-              className="w-[150px] flex flex-row gap-x-4 items-center "
+              className="w-[150px] flex flex-row gap-x-4 items-center banner-animation relative"
             >
                 <Image src='/Everwell Bottle No Shadow.png' width={18} height={57} alt="bottle" className="w-[18px] h-[57px]" />
                 <Image src='/Logo.png' width={96} height={24} alt="logo" className="w-[96px] h-[24px]" />
-            </motion.div>
+            </div>
           ))
         }
       </div>
@@ -34,15 +33,15 @@ const Reviews = () => {
         initial={{ opacity: 0, scale: 0.5}}
         whileInView={{ opacity: 1, scale: 1}}
         transition={{ duration: 0.2 }}
-        className="md:p-12 w-full flex flex-col md:flex-row gap-y-2 md:gap-x-2 justify-center items-center"
+        className="md:p-12 w-full flex flex-col md:flex-row md:gap-x-2 justify-center items-center"
       >
         <motion.div
           initial={{ opacity: 0, scale: 0.5, y: '100px' }}
           whileInView={{ opacity: 1, scale: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="bg-[#89F09C] rounded-ss-[150px] md:rounded-ss-[200px] rounded-lg py-24 px-12 flex flex-col justify-center md:w-7/12 gap-y-14"
+          className="bg-[#89F09C] rounded-ss-[150px] md:rounded-ss-[200px] rounded-lg py-24 px-6 md:px-12 flex flex-col justify-center md:w-7/12 gap-y-14"
         >
-          <p className={myFont.className + ' font-bold text-primary text-[48px]'}>Echoes of Wellness: Dive into the EverWell Experience through Customer Reviews.</p>
+          <p className={myFont.className + ' font-bold text-primary text-[28px] md:text-[48px] leading-[38px] md:leading-[58px]'}>Echoes of Wellness: Dive into the EverWell Experience through Customer Reviews.</p>
 
           <Button title="View All" className="bg-white text-primary outline-none" />
         </motion.div>

@@ -5,32 +5,69 @@ import Button from "./Button"
 import Navbar from "./Navbar"
 import localFont from 'next/font/local'
 
-import { Swiper, SwiperSlide } from "swiper/react"
-import { Navigation } from "swiper/modules"
+
 import 'swiper/css'
 import 'swiper/css/navigation'
 import { motion } from "framer-motion"
+import { useState } from "react"
+import { dummyData } from "@/constants"
 
 const myFont = localFont({ src: '../public/RecklessNeue-Regular.woff2' })
 const myFontMedium = localFont({ src: '../public/RecklessNeue-Medium.woff2' })
 
 const Hero = () => {
 
+  const [bgColor, setBgColor] = useState('from-sky-300')
+  const [isActive, setIsActive] = useState(0)
+  const [products, setProducts] = useState(dummyData)
+
+  const handleNext = () => {
+    setProducts(sortFromIndex(dummyData, isActive))
+
+  }
+
+  function sortFromIndex(array: any, startIndex: number) {
+    // Check if the startIndex is within the bounds of the array
+    console.log(startIndex);
+    if(isActive === 2) {
+      setIsActive(0)
+    } else {
+      setIsActive(isActive + 1)
+    }
+    
+    if (startIndex < 0 || startIndex > array.length - 1) {
+        console.error("Start index is out of bounds.");
+        return array; // Return the original array unchanged
+    }
+
+    // Slice the array into two parts: elements to be sorted and elements before startIndex
+    const toSort = array.slice(startIndex);
+    const beforeStart = array.slice(0, startIndex);
+
+    // Sort the middle part
+    toSort.sort((a: any, b: any) => a - b);
+
+    setBgColor(dummyData[isActive].bgColor)
+    
+    return toSort.concat(beforeStart);
+  }
+
+
 
   return (
-    <div className="h-fit w-full flex flex-col bg-gradient-to-b from-sky-300 to-transparent relative overflow-clip mb-24">
+    <div className={`h-fit w-full flex flex-col bg-gradient-to-b to-transparent relative overflow-clip mb-24 ${bgColor}`}>
       <Navbar />
 
-      <div className="flex flex-col md:flex-row w-full h-full justify-between md:items-center px-12 md:px-24 py-12">
+      <div className="flex flex-col-reverse md:flex-row w-full h-full justify-between md:items-center px-6 md:px-12 pb-12 pt-0 z-10">
         <motion.div
           initial={{ opacity: 0, scale: 0.5 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.7 }}
           className="flex flex-col gap-y-6 md:w-1/3"
         >
-          <h1 className={`text-[54px] leading-[66px] ${myFontMedium.className}`}>Nurturing Wellness,<br /> Nourishing Lives.</h1>
+          <h1 className={`text-[38px] md:text-[48px] leading-[52px] md:leading-[66px] font-bold mt-6 md:mt-0 ${myFontMedium.className}`}>Nurturing Wellness,<br /> Nourishing Lives.</h1>
 
-          <p className="text-sm md:w-4/6 pb-8">Elevate Your Wellness Journey with EverWell, Where Mind, Body, and Spirit Unite for a Healthier You.</p>
+          <p className="text-sm md:w-4/6 pb-4 md:pb-8">Elevate Your Wellness Journey with EverWell, Where Mind, Body, and Spirit Unite for a Healthier You.</p>
 
           <Button fill title="Shop Now" />
         </motion.div>
@@ -39,54 +76,44 @@ const Hero = () => {
           initial={{ opacity: 0, scale: 0.5}}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5, delay: 0.7 }}
-          className="flex flex-row gap-x-6 flex-1 relative"
+          className="flex flex-row gap-x-6 flex-1"
         >
-          <Swiper
-            spaceBetween={50}
-            slidesPerView={2}
-            modules={[Navigation]}
-            navigation
-            className="w-full overflow-visible"
-          >
-            <SwiperSlide className="inline flex-col justify-center items-center text-center pt-24 pl-6 w-2/3">
-              <Image src='/Bottle-hero.png' width={440} height={460} alt="bottle" />
-
-              <h3 className={`text-2xl text-primary ${myFont.className}`}>Lung Cleanser</h3>
-              <p className="text-lg pb-4">Only for $30</p>
-              <Button title="Add to Cart" className="outline-black text-black px-6 py-2 text-xs" />
-            </SwiperSlide>
-
-            <SwiperSlide className="inline flex-row items-center justify-center gap-x-6">
-              <div className="flex flex-col justify-center items-center text-center">
-                <motion.div
-                  initial={{ opacity: 0, scale: 0.5, y: '100px' }}
-                  animate={{ opacity: 1, scale: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: 0.8 }}
-                  className="w-[70px] h-[160px] "
-                >
-                  <Image src='/Everwell Bottle No Shadow Gold.png' width={65} height={165} alt="bottle" className="object-fill" />
-                </motion.div>
-
-                <h3 className={`text-2xl text-primary ${myFont.className}`}>Immune Vitality</h3>
-                <p className="text-lg pb-4">Only for $30</p>
-                <Button title="Add to Cart" className="outline-black text-black px-6 py-2 text-xs" />
-              </div>
-
-              <div className="flex flex-col min-h-[300px] justify-center items-center text-center">
-                  <motion.div
-                    initial={{ opacity: 0, scale: 0.5, y: '100px' }}
-                    animate={{ opacity: 1, scale: 1, y: 0 }}
-                    transition={{ duration: 0.5, delay: 0.9 }}
-                    className="w-[50px] h-[160px]"
-                  >
-                    <Image src='/Everwell Bottle No Shadow.png' width={80} height={190} alt="bottle" className="object-fill" />
-                  </motion.div>
-                  <h3 className={`text-2xl text-primary ${myFont.className}`}>Mind Sharpen</h3>
+          {            
+            products.map((item: any, i: number) => 
+              (i === 0) ? (
+                <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 100 }} key={i} className="flex flex-col justify-center items-center text-center md:pt-20 w-full md:w-6/12 relative transition-all">
+                  <Image src={item.bg} height={460} width={440}  alt="bg" className="absolute z-0" />
+                  {/* <Image src={item.droplet} height={460} width={440}  alt="bg" className="absolute z-10" /> */}
+                  <Image src={item.src} height={460} width={440}  alt="bottle" className={`relative z-20 main-product ${item.bg === 'pink-bg.svg' ? '-rotate-12 -translate-x-[50px]' : 'md:rotate-12 md:translate-x-[50px] translate-y-12'}  transition-all`} />
+    
+                  <h3 className={`text-2xl text-primary font-bold ${myFontMedium.className} mt-40 md:mt-20`}>{item.minTitle}</h3>
                   <p className="text-lg pb-4">Only for $30</p>
-                  <Button title="Add to Cart" className="outline-black text-black px-6 py-2 text-xs" />
-              </div>
-            </SwiperSlide>
-          </Swiper>  
+                  <Button title="Add to Cart" className="outline-black text-black px-6 py-2 text-xs mb-2" />
+                </motion.div>
+              ) : (
+                <div key={i} className="hidden md:flex flex-row items-center justify-center gap-x-6">
+                  <div className="flex flex-col justify-center items-center text-center h-[320px]">
+                    <motion.div
+                      initial={{ opacity: 0, scale: 0.5, y: '100px' }}
+                      animate={{ opacity: 1, scale: 1, y: 0 }}
+                      transition={{ duration: 0.5, delay: 0.8 }}
+                      className="w-[70px] h-fit relative"
+                    >
+                      <Image src={item.src} width={65} height={165} alt="bottle" className="object-cover" />
+                    </motion.div>
+    
+                    <h3 className={`text-2xl text-primary font-bold ${myFont.className}`}>{item.minTitle}</h3>
+                    <p className="text-lg pb-4">Only for $30</p>
+                    <Button title="Add to Cart" className="outline-black text-black px-6 py-2 text-xs" />
+                  </div>
+                </div>              
+              )
+            )
+          }
+
+            <div className="swiper-button-next me-6 md:me-24" onClick={handleNext}>
+              <Image src='/icons/right-arrow.svg' alt="arrow" width={16} height={16} className="hover:scale-150 transition-all scale" />
+            </div>
         </motion.div>
       </div>
     </div>

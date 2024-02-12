@@ -13,7 +13,7 @@ const config: Config = {
       },
       backgroundImage: {
         'blue-radial': "radial-gradient(circle, #8dccff 0%, #d9eeff00 30%)",
-        'landing-bg': "url('../public/105.png')"
+        'landing-bg': "url('../public/mainBg.svg')"
       }
     },
   },

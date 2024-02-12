@@ -11,13 +11,33 @@ const myFont = localFont({ src: '../public/RecklessNeue-Regular.woff2' })
 
 const Collection = () => {
   return (
-    <div className="md:px-12 flex flex-col items-center gap-y-14">
-      <h2 className={`${myFont.className} font-bold text-[24px] md:text-[40px]`}>Wellness Wonders: Explore Our Collection</h2>
+    <div className="flex flex-col md:items-center gap-y-14 w-full px-6 md:px-32 relative">
+      <div className="hidden md:inline absolute right-0 !-translate-y-[100px]">
+          <motion.div
+            initial={{ opacity: 0, scale: 1.2,  }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ delay: 0.7 }}>
+            <Image src='/collection-mid-droplet.svg' alt="droplet" width={58} height={57} />
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, scale: 1.2,  }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ delay: 0.9}}>
+            <Image src='/collection-sm-droplet.svg' alt="droplet" width={24} height={24} />
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, scale: 1.2,  }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ delay: 0.8 }}>
+            <Image src='/collection-big-droplet.svg' alt="droplet" width={251} height={256} />
+          </motion.div>
+      </div>
+      <h2 className={`${myFont.className} font-bold text-[32px] md:text-[40px] text-center md:text-start`}>Wellness Wonders: Explore Our Collection</h2>
         <motion.div
           initial={{ opacity: 0, scale: 0.5, y: '100px' }}
           whileInView={{ opacity: 1, scale: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="flex flex-col md:flex-row gap-y-12 md:gap-x-12"
+          className="flex flex-row gap-x-4 md:gap-x-8 w-full md:w-2/3"
         >
           {
             dummyData.map((item, i) => {
@@ -26,21 +46,33 @@ const Collection = () => {
                     group
                     flex
                     flex-col
-                    md:w-1/3
+                    w-full
+                    md:w-4/12
                     rounded-lg
                     gap-y-2
-                    p-6
+                    py-6
+                    ps-6
+                    hover:p-4
                     bg-gradient-to-b
+                    hover:md:scale-110
+                    transition-all
                     ${i == 0 ? 'from-sky-300'
-                      : i == 1 ? 'from-pink-300 md:scale-110'
+                      : i == 1 ? 'from-pink-300'
                       : 'from-yellow-300'
                     }
                     to-transparent`
                   }>
-                    <div className="w-full h-[270px] relative flex items-center justify-center">
-                      <Image src='/Mask group.png' width={320} height={240} className="group-hover:opacity-100 opacity-0 h-full w-auto absolute top-0 left-0 z-0 transition-all"  alt="bottle" /> 
-                      <Image src='/droplet-transparent.png' width={320} height={240} className="group-hover:opacity-100 opacity-0 h-full w-auto absolute scale-125 top-0 left-0 z-0 transition-all"  alt="bottle" />
-                      <Image src={item.src} width={320} height={240} className="h-full w-auto relative z-10 group-hover:-rotate-[15deg] group-hover:scale-75 transition-all" alt="bottle" /> 
+                    {
+                      item.new && (
+                        <div className="absolute w-[30px] h-[30px] rounded-full bg-primary text-white flex items-center justify-center p-6 z-20">
+                          <p className="text-[16px]">New</p>
+                        </div>
+                      )
+                    }
+                    <div className={`w-full h-[285px] relative flex items-center ${i!==1 ?' justify-end group-hover:justify-center' : 'justify-center'}`}>
+                      <Image src={item.bg} width={320} height={240} className="group-hover:opacity-100 opacity-0 h-full w-auto absolute top-0 left-0 z-0 transition-all scale-110"  alt="bottle" /> 
+                      <Image src={item.srcConShadow} width={320} height={240} className="group-hover:hidden h-full w-auto relative z-10 transition-all" alt="bottle" /> 
+                      <Image src={item.src} width={320} height={240} className={`hidden group-hover:inline h-full w-auto relative z-10 ${i==1 ? 'group-hover:-rotate-[10deg] -translate-x-5' : ' group-hover:rotate-[10deg] translate-x-5'} translate-y-[-50px]  transition-all`} alt="bottle" /> 
                     </div>
 
                     <p className="font-semibold">{item.title}</p>
@@ -67,7 +99,16 @@ const Collection = () => {
         </motion.div>
 
 
-      <Button title="View All" fill />
+      <Button title="View All" fill className="mx-auto" />
+
+      <motion.div
+            initial={{ opacity: 0, scale: 1.2  }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ delay: 0.5}}
+            className="absolute -bottom-64 right-0 z-0 opacity-100"
+          >
+            <Image src='/banner-droplet.svg' alt="droplet" width={156} height={151} />
+          </motion.div>
     </div>
   )
 }
