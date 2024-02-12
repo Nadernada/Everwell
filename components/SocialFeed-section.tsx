@@ -6,7 +6,7 @@ import { motion } from 'framer-motion'
 import localFont from 'next/font/local'
 
 
-const myFont = localFont({ src: '../public/RecklessNeue-medium.woff2' })
+const myFont = localFont({ src: '../public/RecklessNeue-Medium.woff2' })
 
 const dummyPics = [
   '/social1.png',
