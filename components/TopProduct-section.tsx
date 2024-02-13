@@ -32,7 +32,7 @@ const TopProduct = () => {
           modules={[Navigation, Pagination]}
           navigation
           pagination={true}
-          className="w-full overflow-visible xl:max-w-[1440px] flex justify-center"
+          className="w-full overflow-visible 2xl:max-w-[1440px] flex justify-center"
         >
           <SwiperSlide className="w-full flex flex-col lg:flex-row lg:items-center justify-center gap-y-12">
             {

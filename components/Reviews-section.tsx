@@ -33,7 +33,7 @@ const Reviews = () => {
         initial={{ opacity: 0, scale: 0.5}}
         whileInView={{ opacity: 1, scale: 1}}
         transition={{ duration: 0.3 }}
-        className="lg:p-12 w-full flex flex-col lg:flex-row lg:gap-x-2 justify-center xl:max-w-[1440px]"
+        className="lg:p-12 w-full flex flex-col lg:flex-row lg:gap-x-2 justify-center 2xl:max-w-[1440px]"
       >
         <motion.div
           initial={{ opacity: 0, scale: 0.5, y: '100px' }}

@@ -11,7 +11,7 @@ const myFont = localFont({ src: '../public/RecklessNeue-Regular.woff2' })
 
 const Collection = () => {
   return (
-    <div className="flex flex-col lg:items-center gap-y-14 w-full lg:w-[1440px] px-6 lg:px-32 relative">
+    <div className="flex flex-col lg:items-center gap-y-14 w-full 2xl:w-[1440px] px-6 lg:px-32 relative">
       <div className="hidden lg:inline absolute right-0 !-translate-y-[100px]">
           <motion.div
             initial={{ opacity: 0, scale: 1.2,  }}

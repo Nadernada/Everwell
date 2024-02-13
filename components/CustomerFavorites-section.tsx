@@ -51,7 +51,7 @@ const CustomerFavorites = () => {
   }
 
   return (
-    <div className="relative flex flex-col w-full items-center text-center gap-y-4 lg:gap-y-24 pt-24 lg:py-24 xl:max-w-[1440px]">
+    <div className="relative flex flex-col w-full items-center text-center gap-y-4 lg:gap-y-24 pt-24 lg:py-24 2xl:max-w-[1440px]">
       <Image src='/championsText-droplet.png' alt="droplet" width={60} height={50} className="hidden lg:inline absolute left-[75%] lg:left-[62%] top-20" />
       <h3 className={`${myFont.className} text-[28px] lg:text-[44px] text-primary font-bold mb-12`}>Customer Favorites</h3>
 

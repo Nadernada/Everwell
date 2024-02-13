@@ -58,7 +58,7 @@ const Hero = () => {
     <div className={`h-fit w-full flex flex-col xl:items-center bg-gradient-to-b to-transparent relative overflow-clip mb-24 ${bgColor} `}>
       <Navbar />
 
-      <div className="flex flex-col-reverse lg:flex-row w-full h-full justify-between lg:items-center px-6 lg:px-12 pb-12 pt-0 z-10 xl:max-w-[1440px]">
+      <div className="flex flex-col-reverse lg:flex-row w-full h-full justify-between lg:items-center px-6 lg:px-12 pb-12 pt-0 z-10 2xl:max-w-[1440px]">
         <motion.div
           initial={{ opacity: 0, scale: 0.5 }}
           animate={{ opacity: 1, scale: 1 }}

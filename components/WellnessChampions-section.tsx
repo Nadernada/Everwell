@@ -11,7 +11,7 @@ const myFontMedium = localFont({ src: '../public/RecklessNeue-Medium.woff2' })
 
 const Champions = () => {
   return (
-    <div className="relative w-full flex flex-col items-center gap-y-6 pb-24  xl:max-w-[1440px]">
+    <div className="relative w-full flex flex-col items-center gap-y-6 pb-24  2xl:max-w-[1440px]">
       <Image src='/champions-droplet.png' alt="droplet" width={179} height={182} className="hidden lg:inline absolute -bottom-16 -left-4 z-0"/>
       <div className="w-full flex flex-row justify-between items-center">
         <motion.div
