@@ -45,7 +45,7 @@ function Carousel({images}: any, className: string) {
         <motion.div
           initial={{ opacity: 0.5, x: '-50px' }}
           whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.5 }}
+          transition={{ duration: 0.3 }}
           key={dummyBlogs[currentIndex].title}
           className="relative w-full justify-center"
         >
@@ -54,7 +54,7 @@ function Carousel({images}: any, className: string) {
           <motion.div
             initial={{ opacity: 0, x: '-50%', y: '100px' }}
             whileInView={{ opacity: 1, x: '-50%', y: 0 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
+            transition={{ duration: 0.3, delay: 0.05 }}
             className="absolute -bottom-[30px] left-[50%] -translate-x-[50%] rounded-xl bg-white shadow-lg shadow-slate-200 p-4 lg:p-6 flex flex-col gap-y-2 lg:gap-y-4 w-11/12"
           >
             <div className="flex flex-row justify-between text-xs md:text-base text-gray-400">

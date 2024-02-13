@@ -21,7 +21,7 @@ const SuccessStories = () => {
     <motion.div
       initial={{ opacity: 0, x: '-100px' }}
       whileInView={{ opacity: 1, x: 0 }}
-      transition={{ duration: 0.5 }}
+      transition={{ duration: 0.3 }}
       className="flex flex-col items-center text-center gap-y-2 lg:gap-y-4 py-12 lg:py-24"
     >
       <h3 className={`${myFont.className}  text-[24px] lg:text-[44px] text-primary font-bold`}>Success Stories</h3>
@@ -32,7 +32,7 @@ const SuccessStories = () => {
             <motion.div
               initial={{ opacity: 0, y: '100px' }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: i * 0.1 }}
+              transition={{ duration: 0.3, delay: i * 0.1 }}
               className="group relative"
               key={i}
             >

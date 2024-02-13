@@ -17,7 +17,7 @@ const Champions = () => {
         <motion.div
           initial={{ opacity: 0.5, x: '-100px' }}
           whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.5 }}
+          transition={{ duration: 0.3 }}
         >
           <Image src='/championsLeft.svg' alt="champions" width={502} height={150} className="h-[100px] lg:h-[170px] scale-125 lg:scale-100 -translate-x-12 lg:-translate-x-24"/>
         </motion.div>
@@ -25,7 +25,7 @@ const Champions = () => {
         <motion.div
           initial={{ opacity: 0, scale: 0.5 }}
           whileInView={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.5 }}
+          transition={{ duration: 0.4 }}
           className="relative flex flex-col items-center gap-y-10 w-2/6"
         >
           <Image src='/championsText-droplet.png' alt="droplet" width={60} height={50} className="hidden lg:inline lg:absolute -right-16 bottom-24" />
@@ -35,7 +35,7 @@ const Champions = () => {
         <motion.div
           initial={{ opacity: 0.5, x: '100px' }}
           whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.5 }}
+          transition={{ duration: 0.3 }}
         >
           <Image src='/championsRight.svg' alt="champions" width={502} height={150} className="h-[100px] lg:h-[170px] scale-125 lg:scale-100 translate-x-12 lg:translate-x-24"/>
       </motion.div>

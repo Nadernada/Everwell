@@ -23,7 +23,7 @@ const TopProduct = () => {
       <motion.div
         initial={{ opacity: 0, scale: 0.5, y: 0 }}
         whileInView={{ opacity: 1, scale: 1, y: 0 }}
-        transition={{ duration: 0.2 }}
+        transition={{ duration: 0.3 }}
         className={`relative bg-gradient-to-b to-transparent w-full flex flex-col lg:flex-row py-10 my-24 md:my-0 px-4 lg:px-24 ${bgColor}`}
       >
         <Swiper
@@ -43,7 +43,7 @@ const TopProduct = () => {
                     <motion.div
                       initial={{ opacity: 0, scale: 0.5 }}
                       whileInView={{ opacity: 1, scale: 1 }}
-                      transition={{ duration: 0.5 }}
+                      transition={{ duration: 0.3 }}
                       className={`flex flex-col justify-center lg:w-7/12 gap-y-4 px-8 lg:ps-24 ${bgColor} transition-all`}
                     >
                       <h2 className={`${myFont.className} font-bold text-[45px] lg:text-[74px] text-primary leading-[55px] lg:leading-[84px]`}>Immunity:<br />Immune Vitality</h2>
@@ -66,7 +66,7 @@ const TopProduct = () => {
                     <motion.div
                       initial={{ opacity: 0, scale: 0.5 }}
                       whileInView={{ opacity: 1, scale: 1 }}
-                      transition={{ duration: 0.5 }}
+                      transition={{ duration: 0.3 }}
                       className={`flex flex-col justify-center lg:w-7/12 gap-y-4 px-8 lg:ps-24 ${bgColor}`}
                     >
                       <h2 className={`${myFont.className} font-bold text-[45px] lg:text-[74px] text-primary leading-[55px] lg:leading-[84px]`}>Immunity:<br />Immune Vitality</h2>
@@ -89,7 +89,7 @@ const TopProduct = () => {
                       <motion.div
                         initial={{ opacity: 0, scale: 0.5 }}
                         whileInView={{ opacity: 1, scale: 1 }}
-                        transition={{ duration: 0.5 }}
+                        transition={{ duration: 0.3 }}
                         className={`flex flex-col justify-center lg:w-7/12 gap-y-4 px-8 md:ps-24 ${bgColor}`}
                       >
                       <h2 className={`${myFont.className} font-bold text-[45px] md:text-[74px] text-primary leading-[55px] md:leading-[84px]`}>Immunity:<br />Immune Vitality</h2>

@@ -20,7 +20,7 @@ const SocialFeed = () => {
     <motion.div
       initial={{ opacity: 0, scale: 0.5 }}
       whileInView={{ opacity: 1, scale: 1 }}
-      transition={{ duration: 0.5}}
+      transition={{ duration: 0.3}}
       className="w-full flex flex-col items-center gap-y-12 py-12 xl:max-w-[1440px]"
     >
       <h2 className={` text-[28px] lg:text-[38px] leading-[28px] lg:leading-[46px] text-primary font-bold text-center lg:text-start ${myFont.className}`}>Stay Connected: Dive into Our Social Media Feed</h2>
@@ -31,7 +31,7 @@ const SocialFeed = () => {
             <motion.div
               initial={{ opacity: 0, y: '100px' }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.4, delay: i * 0.05 }}
+              transition={{ duration: 0.3, delay: i * 0.05 }}
               className="group relative w-11/12 flex justify-center"
               key={i}
             >

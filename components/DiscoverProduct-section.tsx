@@ -13,7 +13,7 @@ const DiscoverProduct = () => {
     <motion.div
       initial={{ opacity: 0, scale: 0.5 }}
       whileInView={{ opacity: 1, scale: 1 }}
-      transition={{ duration: 0.5 }}
+      transition={{ duration: 0.3 }}
       className="bg-primary rounded-se-[150px] lg:rounded-se-[200px] lg:rounded-3xl pt-16 px-8 lg:px-0 lg:py-0  md:m-12 flex flex-col lg:flex-row justify-between gap-y-0 lg:gap-x-14 lg:w-11/12 z-10 xl:max-w-[1440px]"
     >
       <div className="flex flex-col justify-center gap-y-12 lg:p-12">
