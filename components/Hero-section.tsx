@@ -82,9 +82,9 @@ const Hero = () => {
             products.map((item: any, i: number) => 
               (i === 0) ? (
                 <motion.div initial={{ opacity: 0, scale: 1.1 }} whileInView={{ opacity: 100, scale: 1 }} key={i} className="flex flex-col justify-center items-center text-center lg:pt-20 w-full lg:w-6/12 relative transition-all">
-                  <Image src={item.bg} height={460} width={440}  alt="bg" className="absolute z-0" />
+                  <Image src={item.bg} priority={true} height={460} width={440}  alt="bg" className="absolute z-0" />
                   {/* <Image src={item.droplet} height={460} width={440}  alt="bg" className="absolute z-10" /> */}
-                  <Image src={item.src} height={460} width={440}  alt="bottle" className={`relative z-20 main-product ${item.bg === 'pink-bg.svg' ? '-rotate-12 -translate-x-[69px] translate-y-20  lg:translate-y-2' : item.bg === '/blue-bg.svg' ? 'lg:rotate-[10deg] lg:translate-x-[10px] translate-y-12' : 'lg:rotate-12 lg:translate-x-[50px] translate-y-12'} translate-x-0 translate-y-0 duration-300 transition-all`} />
+                  <Image src={item.src} priority={true} height={460} width={440}  alt="bottle" className={`relative z-20 main-product ${item.bg === 'pink-bg.svg' ? '-rotate-12 -translate-x-[69px] translate-y-20  lg:translate-y-2' : item.bg === '/blue-bg.svg' ? 'lg:rotate-[10deg] lg:translate-x-[10px] translate-y-12' : 'lg:rotate-12 lg:translate-x-[50px] translate-y-12'} translate-x-0 translate-y-0 duration-300 transition-all`} />
     
                   <h3 className={`text-2xl text-primary font-bold ${myFontMedium.className} mt-40 lg:mt-20`}>{item.minTitle}</h3>
                   <p className="text-lg pb-4">Only for $30</p>
@@ -99,7 +99,7 @@ const Hero = () => {
                       transition={{ duration: 0.5, delay: 0.1 }}
                       className="w-[70px] h-fit relative"
                     >
-                      <Image src={item.src} width={65} height={165} alt="bottle" className="object-cover" />
+                      <Image src={item.src} priority={true} width={65} height={165} alt="bottle" className="object-cover" />
                     </motion.div>
     
                     <>
