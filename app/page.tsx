@@ -16,7 +16,7 @@ import Champions from "@/components/WellnessChampions-section";
 
 export default function Home() {
   return (
-    <main className="flex flex-col items-center w-full bg-landing-bg overflow-hidden">
+    <main className="flex flex-col items-center justify-center w-full bg-landing-bg overflow-hidden xl:overflow-x-visible">
       <div className="flex w-full bg-primary text-center py-2">
         <p className="text-white mx-auto text-xs lg:text-sm">Sign up and get 20% off to your first order. <span className="font-bold underline">Sign Up Now</span></p>
       </div>

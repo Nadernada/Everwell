@@ -15,9 +15,9 @@ const Contact = () => {
       initial={{ opacity: 0, scale: 0 }}
       whileInView={{ opacity: 1, scale: 1 }}
       transition={{ duration: 0.5}}
-      className="flex flex-col lg:flex-row items-center gap-y-4 lg:gap-x-4 m-8 lg:m-24 lg:h-[480px] w-11/12 lg:w-10/12"
+      className="flex flex-col lg:flex-row items-center gap-y-4 lg:gap-x-4 m-8 lg:m-24 lg:h-[480px] w-11/12 lg:w-10/12 xl:max-w-[1440px]"
     >
-      <Image src='/cta.png' alt="contact" width={600} height={480} className="order-last lg:order-none md:w-full lg:w-full" />
+      <Image src='/cta.png' alt="contact" width={600} height={480} className="order-last lg:order-none md:w-full lg:w-auto md:h-full" />
 
       <div className="p-8 py-16 lg:py-8 flex flex-col justify-center gap-y-4 bg-gray-100 rounded-2xl h-full w-full ">
         <h2 className={`${myFont.className} text-[30px] leading-[34px] lg:text-[56px] lg:leading-[64px] text-primary w-1/2`}>Join Our <b>Community</b></h2>

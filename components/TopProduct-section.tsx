@@ -24,7 +24,7 @@ const TopProduct = () => {
         initial={{ opacity: 0, scale: 0.5, y: 0 }}
         whileInView={{ opacity: 1, scale: 1, y: 0 }}
         transition={{ duration: 0.2 }}
-        className={`relative bg-gradient-to-b to-transparent w-full flex flex-col lg:flex-row py-10 my-24 px-4 lg:px-24 ${bgColor}`}
+        className={`relative bg-gradient-to-b to-transparent w-full flex flex-col lg:flex-row py-10 my-24 md:my-0 px-4 lg:px-24 ${bgColor}`}
       >
         <Swiper
           spaceBetween={50}
@@ -32,7 +32,7 @@ const TopProduct = () => {
           modules={[Navigation, Pagination]}
           navigation
           pagination={true}
-          className="w-full overflow-visible"
+          className="w-full overflow-visible md:h-fit xl:max-w-[1440px]"
         >
           <SwiperSlide className="w-full flex flex-col lg:flex-row lg:items-center justify-center gap-y-12">
             {

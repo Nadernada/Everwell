@@ -33,7 +33,7 @@ const Reviews = () => {
         initial={{ opacity: 0, scale: 0.5}}
         whileInView={{ opacity: 1, scale: 1}}
         transition={{ duration: 0.2 }}
-        className="lg:p-12 w-full flex flex-col lg:flex-row lg:gap-x-2 justify-center"
+        className="lg:p-12 w-full flex flex-col lg:flex-row lg:gap-x-2 justify-center xl:max-w-[1440px]"
       >
         <motion.div
           initial={{ opacity: 0, scale: 0.5, y: '100px' }}
@@ -58,7 +58,7 @@ const Reviews = () => {
               >
                 {
                   review.type === 'picture' ? (
-                    <Image src={review.src || '/Person1.png'} width={159} height={173} alt="person" />
+                    <Image src={review.src || '/Person1.png'} width={159} height={173} alt="person" className="" />
                   ) : (
                     <>
                       <p className="text-center">{review.text}</p>

@@ -9,7 +9,7 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false)
 
   return (
-    <div className="flex flex-row justify-between items-center px-8 lg:px-12 py-6 relative z-20">
+    <div className="flex flex-row justify-between items-center px-8 lg:px-12 py-6 relative z-20 xl:w-[1440px]">
       <div className="hidden lg:flex flex-row gap-x-4 text-sm">
         <Link href={'/'}>Shop</Link>
         <Link href={'/'}>Blog</Link>

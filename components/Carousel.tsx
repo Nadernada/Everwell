@@ -57,12 +57,12 @@ function Carousel({images}: any, className: string) {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="absolute -bottom-[30px] left-[50%] -translate-x-[50%] rounded-xl bg-white shadow-lg shadow-slate-200 p-4 lg:p-6 flex flex-col gap-y-2 lg:gap-y-4 w-11/12"
           >
-            <div className="flex flex-row justify-between text-xs text-gray-400">
+            <div className="flex flex-row justify-between text-xs md:text-base text-gray-400">
               <p>By Admin</p>
               <p>27/10/2023</p>
             </div>
 
-            <p className="text-sm lg:text-lg font-bold">{dummyBlogs[currentIndex].title.length > 52 ? (dummyBlogs[currentIndex].title.slice(0,52) + '...') : dummyBlogs[currentIndex].title}</p>
+            <p className="text-sm md:text-lg lg:text-lg font-bold">{dummyBlogs[currentIndex].title.length > 52 ? (dummyBlogs[currentIndex].title.slice(0,52) + '...') : dummyBlogs[currentIndex].title}</p>
           </motion.div>
         </motion.div>
         <div className="next-div w-4 h-4" onClick={goToNextSlide}>

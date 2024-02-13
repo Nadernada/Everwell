@@ -8,7 +8,7 @@ const myFont = localFont({ src: '../public/RecklessNeue-Regular.woff2' })
 
 const Benefits = () => {
   return (
-    <div className="w-full relative hidden lg:flex items-center justify-center py-24 bg-blue-radial">
+    <div className="w-full relative hidden lg:flex items-center justify-center py-24 bg-blue-radial xl:max-w-[1440px]">
       <Image src='/benefits-bottle.png' alt="benefits" width={600} height={680} className="w-[400px] h-[480px] lg:w-[600px] lg:h-[680px]" />
 
       <motion.div

@@ -23,7 +23,7 @@ export const dummyBlogs = [
 
 const Blog = () => {
   return (
-    <div className="w-full flex flex-col lg:flex-row px-8 lg:px-24 py-12 mb-24 gap-y-12 lg:gap-x-10 justify-center relative">
+    <div className="w-full flex flex-col lg:flex-row px-8 lg:px-24 py-12 mb-24 gap-y-12 lg:gap-x-10 justify-center relative xl:max-w-[1440px]">
       <motion.div
         initial={{ opacity: 0, scale: 1.2,  }}
         whileInView={{ opacity: 1, scale: 1 }}
