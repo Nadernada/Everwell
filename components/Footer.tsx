@@ -63,8 +63,8 @@ const Footer = () => {
             }
           </div>
           <div className="flex flex-col gap-y-4">
-            <p className="peer uppercase text-lg">FAQ</p>
-            <div className="hidden lg:block peer-hover:block">
+            <p className="uppercase text-lg">FAQ</p>
+            <div className="flex flex-col gap-y-4">
               <p className="text-sm font-thin text-gray-300 hover:text-gray-500 cursor-pointer">Products</p>
               <p className="text-sm font-thin text-gray-300 hover:text-gray-500 cursor-pointer">Ordering & Shipping</p>
               <p className="text-sm font-thin text-gray-300 hover:text-gray-500 cursor-pointer">Wellness Quiz</p>
