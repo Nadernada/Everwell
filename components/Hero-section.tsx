@@ -75,7 +75,7 @@ const Hero = () => {
         <motion.div
           initial={{ opacity: 0, scale: 0.5}}
           animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.5, delay: 0.7 }}
+          transition={{ duration: 0.5, delay: 0.1 }}
           className="flex flex-row gap-x-6 flex-1"
         >
           {            
@@ -96,7 +96,7 @@ const Hero = () => {
                     <motion.div
                       initial={{ opacity: 0, scale: 0.5, y: '100px' }}
                       animate={{ opacity: 1, scale: 1, y: 0 }}
-                      transition={{ duration: 0.5, delay: 0.8 }}
+                      transition={{ duration: 0.5, delay: 0.2 }}
                       className="w-[70px] h-fit relative"
                     >
                       <Image src={item.src} width={65} height={165} alt="bottle" className="object-cover" />

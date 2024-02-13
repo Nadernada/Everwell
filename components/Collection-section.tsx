@@ -16,19 +16,19 @@ const Collection = () => {
           <motion.div
             initial={{ opacity: 0, scale: 1.2,  }}
             whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 0.7 }}>
+            transition={{ delay: 0.3 }}>
             <Image src='/collection-mid-droplet.svg' alt="droplet" width={58} height={57} />
           </motion.div>
           <motion.div
             initial={{ opacity: 0, scale: 1.2,  }}
             whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 0.9}}>
+            transition={{ delay: 0.4}}>
             <Image src='/collection-sm-droplet.svg' alt="droplet" width={24} height={24} />
           </motion.div>
           <motion.div
             initial={{ opacity: 0, scale: 1.2,  }}
             whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 0.8 }}>
+            transition={{ delay: 0.5 }}>
             <Image src='/collection-big-droplet.svg' alt="droplet" width={251} height={256} />
           </motion.div>
       </div>
@@ -36,7 +36,7 @@ const Collection = () => {
         <motion.div
           initial={{ opacity: 0, scale: 0.5, y: '100px' }}
           whileInView={{ opacity: 1, scale: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
+          transition={{ duration: 0.3 }}
           className="flex flex-row gap-x-4 lg:gap-x-8 lg:w-full lg:justify-center relative overflow-scroll lg:overflow-visible"
         >
           <div className="flex flex-row gap-x-4 lg:gap-x-8 min-w-fit lg:w-full lg:justify-center overflow-scroll lg:overflow-visible">

@@ -31,7 +31,7 @@ const SocialFeed = () => {
             <motion.div
               initial={{ opacity: 0, y: '100px' }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: i * 0.2 }}
+              transition={{ duration: 0.4, delay: i * 0.05 }}
               className="group relative w-11/12 flex justify-center"
               key={i}
             >

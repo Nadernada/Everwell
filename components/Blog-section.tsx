@@ -27,7 +27,7 @@ const Blog = () => {
       <motion.div
         initial={{ opacity: 0, scale: 1.2,  }}
         whileInView={{ opacity: 1, scale: 1 }}
-        transition={{ delay: 0.5 }}
+        transition={{ delay: 0.1 }}
         className="hidden lg:inline absolute right-0 !-translate-y-[50%]">
         <Image src='/blogDroplet.svg' alt="droplet" width={240} height={200} className="" />
       </motion.div>
@@ -36,7 +36,7 @@ const Blog = () => {
           <motion.div
             initial={{ opacity: 0.5, y: '-100px' }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
+            transition={{ duration: 0.15 }}
             key={blog.title}
             className="relative w-full lg:w-3/12 hidden lg:flex justify-center"
           >

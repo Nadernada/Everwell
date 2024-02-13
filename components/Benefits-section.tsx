@@ -24,7 +24,7 @@ const Benefits = () => {
       <motion.div
         initial={{ opacity: 0, x: '-100px' }}
         whileInView={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.5, delay: 0.2 }}
+        transition={{ duration: 0.5, delay: 0.05 }}
         className="absolute bottom-[300px] lg:bottom-[400px] left-0 lg:left-[320px]"
       >
         <p className={`${myFont.className} uppercase text-xs lg:text-lg`}>Sound sleep for total wellness</p>
@@ -34,7 +34,7 @@ const Benefits = () => {
       <motion.div
         initial={{ opacity: 0, x: '100px' }}
         whileInView={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.5, delay: 0.4 }}
+        transition={{ duration: 0.5, delay: 0.15 }}
         className="absolute top-[250px] lg:top-[320px] right-0 lg:right-[270px] flex flex-col items-end"
       >
         <p className={`${myFont.className} uppercase text-xs lg:text-lg`}>Stronger immunity, healthier you</p>
@@ -44,7 +44,7 @@ const Benefits = () => {
       <motion.div
         initial={{ opacity: 0, x: '-100px' }}
         whileInView={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0., delay: 0.6 }}
+        transition={{ duration: 0., delay: 0.25 }}
         className="absolute bottom-[250px] lg:bottom-[350px] right-0 lg:right-[310px] flex flex-col items-end"
       >
         <p className={`${myFont.className} uppercase text-xs lg:text-lg`}>Energize your life today</p>
