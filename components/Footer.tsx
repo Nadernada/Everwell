@@ -25,12 +25,12 @@ const paymentMethods = [
 
 const Footer = () => {
   return (
-    <div className="w-full bg-primary text-white p-6 md:p-20 mt-12 flex flex-col rounded-t-3xl">
-      <div className="flex flex-col md:flex-row gap-y-12 justify-between pb-12">
-        <div className="flex flex-row md:flex-col gap-y-4">
+    <div className="w-full bg-primary text-white p-6 lg:p-20 mt-12 flex flex-col rounded-t-3xl">
+      <div className="flex flex-col lg:flex-row gap-y-12 justify-between pb-12">
+        <div className="flex flex-row lg:flex-col gap-y-4">
           <div className="flex flex-col gap-y-3">
-            <Image src='/LogoBig.svg' alt="logo" width={263} height={66} className="w-1/2 md:w-full h-auto" />
-            <p className="text-xs md:text-lg">Elevate your inner wellness</p>
+            <Image src='/LogoBig.svg' alt="logo" width={263} height={66} className="w-1/2 lg:w-full h-auto" />
+            <p className="text-xs lg:text-lg">Elevate your inner wellness</p>
           </div>
           <div className="flex flex-row items-center gap-x-2 mt-4">
             <div className="rounded-full bg-white w-8 h-8 flex justify-center items-center">
@@ -45,7 +45,7 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="hidden md:flex flex-col md:flex-row justify-center gap-y-12 md:gap-x-24">
+        <div className="hidden lg:flex flex-col lg:flex-row justify-center gap-y-12 lg:gap-x-24">
           <div className="flex flex-col gap-y-4">
             <p className="uppercase text-lg">company</p>
             {
@@ -64,7 +64,7 @@ const Footer = () => {
           </div>
           <div className="flex flex-col gap-y-4">
             <p className="peer uppercase text-lg">FAQ</p>
-            <div className="hidden md:block peer-hover:block">
+            <div className="hidden lg:block peer-hover:block">
               <p className="text-sm font-thin text-gray-300 hover:text-gray-500 cursor-pointer">Products</p>
               <p className="text-sm font-thin text-gray-300 hover:text-gray-500 cursor-pointer">Ordering & Shipping</p>
               <p className="text-sm font-thin text-gray-300 hover:text-gray-500 cursor-pointer">Wellness Quiz</p>
@@ -73,7 +73,7 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="flex md:hidden flex-col md:flex-row justify-center gap-y-3">
+        <div className="flex lg:hidden flex-col lg:flex-row justify-center gap-y-3">
           {
             footerLinks.map(item => (
               <details key={item.title} className="py-3">
@@ -98,10 +98,10 @@ const Footer = () => {
 
 
 
-      <div className="w-full flex flex-col items-center md:items-stretch">
+      <div className="w-full flex flex-col items-center lg:items-stretch">
         <div className="h-[1px] bg-white w-full"/>
 
-        <div className="flex flex-col md:flex-row gap-y-4 justify-between py-4">
+        <div className="flex flex-col lg:flex-row gap-y-4 justify-between py-4">
           <p className="text-xs font-thin">Copyright 2023 EverWell. AllRights Reserved.</p>
           <div className="flex flex-row gap-x-2">
             {

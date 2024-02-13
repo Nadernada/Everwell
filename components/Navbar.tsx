@@ -9,21 +9,21 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false)
 
   return (
-    <div className="flex flex-row justify-between items-center px-8 md:px-12 py-6 relative z-20">
-      <div className="hidden md:flex flex-row gap-x-4 text-sm">
+    <div className="flex flex-row justify-between items-center px-8 lg:px-12 py-6 relative z-20">
+      <div className="hidden lg:flex flex-row gap-x-4 text-sm">
         <Link href={'/'}>Shop</Link>
         <Link href={'/'}>Blog</Link>
         <Link href={'/'}>About</Link>
       </div>
-      <div className="flex md:hidden">
+      <div className="flex lg:hidden">
         <Image src={isOpen ? '/icons/close.svg' : '/icons/menuIcon.svg'} alt='menu' width={30} height={30} className="cursor-pointer hover:opacity-60 transition-all z-20" onClick={() => setIsOpen(!isOpen)} />
       </div>
 
       <Image src={isOpen ? '/LogoBig.svg' : '/Logo.svg'} width={130} height={30} alt="logo"/>
 
-      <Link href={'/'} className={`md:hidden ${isOpen ? 'text-white' : ''} z-20`}>Cart (0)</Link>
+      <Link href={'/'} className={`lg:hidden ${isOpen ? 'text-white' : ''} z-20`}>Cart (0)</Link>
 
-      <div className="hidden md:flex flex-row gap-x-4 text-sm">
+      <div className="hidden lg:flex flex-row gap-x-4 text-sm">
         <Image src='/icons/circum_search.svg' alt="search" width={22} height={22} />
         <Link href={'/'}>Cart (0)</Link>
         <Link href={'/'}>My Account</Link>

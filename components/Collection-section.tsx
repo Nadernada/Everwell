@@ -11,8 +11,8 @@ const myFont = localFont({ src: '../public/RecklessNeue-Regular.woff2' })
 
 const Collection = () => {
   return (
-    <div className="flex flex-col md:items-center gap-y-14 w-full md:w-[1440px] px-6 md:px-32 relative">
-      <div className="hidden md:inline absolute right-0 !-translate-y-[100px]">
+    <div className="flex flex-col lg:items-center gap-y-14 w-full lg:w-[1440px] px-6 lg:px-32 relative">
+      <div className="hidden lg:inline absolute right-0 !-translate-y-[100px]">
           <motion.div
             initial={{ opacity: 0, scale: 1.2,  }}
             whileInView={{ opacity: 1, scale: 1 }}
@@ -32,14 +32,14 @@ const Collection = () => {
             <Image src='/collection-big-droplet.svg' alt="droplet" width={251} height={256} />
           </motion.div>
       </div>
-      <h2 className={`${myFont.className} font-bold text-[32px] md:text-[40px] text-center md:text-start`}>Wellness Wonders: Explore Our Collection</h2>
+      <h2 className={`${myFont.className} font-bold text-[32px] lg:text-[40px] text-center lg:text-start`}>Wellness Wonders: Explore Our Collection</h2>
         <motion.div
           initial={{ opacity: 0, scale: 0.5, y: '100px' }}
           whileInView={{ opacity: 1, scale: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="flex flex-row gap-x-4 md:gap-x-8 w-fit md:w-full md:justify-center relative overflow-visible"
+          className="flex flex-row gap-x-4 lg:gap-x-8 w-fit lg:w-full lg:justify-center relative overflow-visible"
         >
-          <div className="flex flex-row gap-x-4 md:gap-x-8 w-fit md:w-full md:justify-center">
+          <div className="flex flex-row gap-x-4 lg:gap-x-8 w-fit lg:w-full lg:justify-center">
           {
             dummyData.map((item, i) => {
               return (
@@ -48,14 +48,14 @@ const Collection = () => {
                     flex
                     flex-col
                     w-[360px]
-                    md:w-3/12
+                    lg:w-3/12
                     rounded-lg
                     gap-y-2
                     py-6
                     ps-6
                     hover:p-4
                     bg-gradient-to-b
-                    hover:md:scale-110
+                    hover:lg:scale-110
                     transition-all
                     ${i == 0 ? 'from-sky-300'
                       : i == 1 ? 'from-pink-300'
@@ -88,7 +88,7 @@ const Collection = () => {
                         item.discount && (
                           <>
                             <p className="font-bold text-gray-400 line-through">${item.prevPrice}</p>
-                            <p className="bg-red-200 text-red-700 text-xs rounded-md p-1">-{item.discount}</p>
+                            <p className="bg-red-200 text-red-700 text-xs rounded-lg p-1">-{item.discount}</p>
                           </>
                         )
                       }

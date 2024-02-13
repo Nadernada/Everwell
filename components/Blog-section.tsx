@@ -23,12 +23,12 @@ export const dummyBlogs = [
 
 const Blog = () => {
   return (
-    <div className="w-full flex flex-col md:flex-row px-8 md:px-24 py-12 mb-24 gap-y-12 md:gap-x-10 justify-center relative">
+    <div className="w-full flex flex-col lg:flex-row px-8 lg:px-24 py-12 mb-24 gap-y-12 lg:gap-x-10 justify-center relative">
       <motion.div
         initial={{ opacity: 0, scale: 1.2,  }}
         whileInView={{ opacity: 1, scale: 1 }}
         transition={{ delay: 0.5 }}
-        className="hidden md:inline absolute right-0 !-translate-y-[50%]">
+        className="hidden lg:inline absolute right-0 !-translate-y-[50%]">
         <Image src='/blogDroplet.svg' alt="droplet" width={240} height={200} className="" />
       </motion.div>
       {
@@ -38,22 +38,22 @@ const Blog = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
             key={blog.title}
-            className="relative w-full md:w-3/12 hidden md:flex justify-center"
+            className="relative w-full lg:w-3/12 hidden lg:flex justify-center"
           >
-            <Image src={blog.src} alt="blog-post" width={375} height={360} className="w-10/12 h-full md:w-[375px] md:h-auto" />
+            <Image src={blog.src} alt="blog-post" width={375} height={360} className="w-10/12 h-full lg:w-[375px] lg:h-auto" />
 
             <motion.div
               initial={{ opacity: 0, x: '-50%', y: '100px' }}
               whileInView={{ opacity: 1, x: '-50%', y: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
-              className="absolute -bottom-[30px] left-[50%] -translate-x-[50%] rounded-xl bg-white shadow-md shadow-slate-200 p-4 md:p-6 flex flex-col gap-y-2 md:gap-y-4 w-2/3 md:w-10/12"
+              className="absolute -bottom-[30px] left-[50%] -translate-x-[50%] rounded-xl bg-white shadow-lg shadow-slate-200 p-4 lg:p-6 flex flex-col gap-y-2 lg:gap-y-4 w-2/3 lg:w-10/12"
             >
               <div className="flex flex-row justify-between text-xs text-gray-400">
                 <p>By Admin</p>
                 <p>27/10/2023</p>
               </div>
 
-              <p className="text-sm md:text-md font-bold">{blog.title.length > 52 ? (blog.title.slice(0,52) + '...') : blog.title}</p>
+              <p className="text-sm lg:text-lg font-bold">{blog.title.length > 52 ? (blog.title.slice(0,52) + '...') : blog.title}</p>
             </motion.div>
           </motion.div>
         ))

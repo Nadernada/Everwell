@@ -58,16 +58,16 @@ const Hero = () => {
     <div className={`h-fit w-full flex flex-col bg-gradient-to-b to-transparent relative overflow-clip mb-24 ${bgColor}`}>
       <Navbar />
 
-      <div className="flex flex-col-reverse md:flex-row w-full h-full justify-between md:items-center px-6 md:px-12 pb-12 pt-0 z-10">
+      <div className="flex flex-col-reverse lg:flex-row w-full h-full justify-between lg:items-center px-6 lg:px-12 pb-12 pt-0 z-10">
         <motion.div
           initial={{ opacity: 0, scale: 0.5 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.7 }}
-          className="flex flex-col gap-y-6 md:w-1/3"
+          className="flex flex-col gap-y-6 lg:w-1/3"
         >
-          <h1 className={`text-[38px] md:text-[48px] leading-[52px] md:leading-[66px] font-bold mt-6 md:mt-0 ${myFontMedium.className}`}>Nurturing Wellness,<br /> Nourishing Lives.</h1>
+          <h1 className={`text-[38px] lg:text-[48px] leading-[52px] lg:leading-[66px] font-bold mt-6 lg:mt-0 ${myFontMedium.className}`}>Nurturing Wellness,<br /> Nourishing Lives.</h1>
 
-          <p className="text-sm md:w-4/6 pb-4 md:pb-8">Elevate Your Wellness Journey with EverWell, Where Mind, Body, and Spirit Unite for a Healthier You.</p>
+          <p className="text-sm lg:w-4/6 pb-4 lg:pb-8">Elevate Your Wellness Journey with EverWell, Where Mind, Body, and Spirit Unite for a Healthier You.</p>
 
           <Button fill title="Shop Now" />
         </motion.div>
@@ -81,17 +81,17 @@ const Hero = () => {
           {            
             products.map((item: any, i: number) => 
               (i === 0) ? (
-                <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 100 }} key={i} className="flex flex-col justify-center items-center text-center md:pt-20 w-full md:w-6/12 relative transition-all">
+                <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 100 }} key={i} className="flex flex-col justify-center items-center text-center lg:pt-20 w-full lg:w-6/12 relative transition-all">
                   <Image src={item.bg} height={460} width={440}  alt="bg" className="absolute z-0" />
                   {/* <Image src={item.droplet} height={460} width={440}  alt="bg" className="absolute z-10" /> */}
-                  <Image src={item.src} height={460} width={440}  alt="bottle" className={`relative z-20 main-product ${item.bg === 'pink-bg.svg' ? '-rotate-12 -translate-x-[70px] translate-y-16 md:translate-y-2' : item.bg === '/blue-bg.svg' ? 'md:rotate-[10deg] md:translate-x-[10px] translate-y-12' : 'md:rotate-12 md:translate-x-[50px] translate-y-12'} translate-x-0 translate-y-0 duration-300 transition-all`} />
+                  <Image src={item.src} height={460} width={440}  alt="bottle" className={`relative z-20 main-product ${item.bg === 'pink-bg.svg' ? '-rotate-12 -translate-x-[70px] translate-y-16 lg:translate-y-2' : item.bg === '/blue-bg.svg' ? 'lg:rotate-[10deg] lg:translate-x-[10px] translate-y-12' : 'lg:rotate-12 lg:translate-x-[50px] translate-y-12'} translate-x-0 translate-y-0 duration-300 transition-all`} />
     
-                  <h3 className={`text-2xl text-primary font-bold ${myFontMedium.className} mt-40 md:mt-20`}>{item.minTitle}</h3>
+                  <h3 className={`text-2xl text-primary font-bold ${myFontMedium.className} mt-40 lg:mt-20`}>{item.minTitle}</h3>
                   <p className="text-lg pb-4">Only for $30</p>
                   <Button title="Add to Cart" className="outline-black text-black px-6 py-2 text-xs mb-2" />
                 </motion.div>
               ) : (
-                <div key={i} className="hidden md:flex flex-row items-center justify-center gap-x-6">
+                <div key={i} className="hidden lg:flex flex-row items-center justify-center gap-x-6">
                   <div className="flex flex-col justify-center items-center text-center h-[320px]">
                     <motion.div
                       initial={{ opacity: 0, scale: 0.5, y: '100px' }}
@@ -111,7 +111,7 @@ const Hero = () => {
             )
           }
 
-            <div className="swiper-button-next me-6 md:me-24 cursor-pointer" onClick={handleNext}>
+            <div className="swiper-button-next me-6 lg:me-24 cursor-pointer" onClick={handleNext}>
               <Image src='/icons/right-arrow.svg' alt="arrow" width={16} height={16} className="hover:scale-150 transition-all scale" />
             </div>
         </motion.div>

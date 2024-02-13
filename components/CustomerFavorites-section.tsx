@@ -51,12 +51,12 @@ const CustomerFavorites = () => {
   }
 
   return (
-    <div className="relative flex flex-col w-full items-center text-center gap-y-4 md:gap-y-24 pt-24 md:py-24">
-      <Image src='/championsText-droplet.png' alt="droplet" width={60} height={50} className="hidden md:inline absolute left-[75%] md:left-[62%] top-20" />
-      <h3 className={`${myFont.className} text-[28px] md:text-[44px] text-primary font-bold mb-12`}>Customer Favorites</h3>
+    <div className="relative flex flex-col w-full items-center text-center gap-y-4 lg:gap-y-24 pt-24 lg:py-24">
+      <Image src='/championsText-droplet.png' alt="droplet" width={60} height={50} className="hidden lg:inline absolute left-[75%] lg:left-[62%] top-20" />
+      <h3 className={`${myFont.className} text-[28px] lg:text-[44px] text-primary font-bold mb-12`}>Customer Favorites</h3>
 
 
-        <div className="w-[70%] flex flex-row gap-x-12 md:gap-x-48 relative justify-center mx-auto">
+        <div className="w-[70%] flex flex-row gap-x-12 lg:gap-x-48 relative justify-center mx-auto">
           <div className="swiper-button-prev mr-32" onClick={handlePrev} />
 
           {
@@ -82,7 +82,7 @@ const CustomerFavorites = () => {
                     }
                     ${i==1 ? ' scale-110 absolute top-0 left-1/2 -translate-x-1/2 z-10' : i==0 ? '-rotate-12 scale-75' : ' rotate-12 scale-75'}
                     to-white
-                    shadow-md
+                    shadow-lg
                     shadow-gray-200`
                   }>
                     <div className="w-full h-[270px] relative flex items-center justify-center mb-4">
@@ -108,7 +108,7 @@ const CustomerFavorites = () => {
                         item.discount && (
                           <>
                             <p className="font-bold text-gray-400 line-through">${item.prevPrice}</p>
-                            <p className="bg-red-200 text-red-700 text-xs rounded-md p-1">-{item.discount}</p>
+                            <p className="bg-red-200 text-red-700 text-xs rounded-lg p-1">-{item.discount}</p>
                           </>
                         )
                       }
