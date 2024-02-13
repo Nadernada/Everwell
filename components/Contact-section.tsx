@@ -1,4 +1,3 @@
-'use client'
 
 import Image from "next/image"
 import Button from "./Button"
@@ -11,11 +10,9 @@ const myFont = localFont({ src: '../public/RecklessNeue-Regular.woff2' })
 
 const Contact = () => {
   return (
-    <motion.div
-      initial={{ opacity: 0, scale: 0 }}
-      whileInView={{ opacity: 1, scale: 1 }}
-      transition={{ duration: 0.3}}
-      className="flex flex-col lg:flex-row items-center gap-y-4 lg:gap-x-4 m-8 lg:m-24 lg:h-[480px] w-11/12 lg:w-10/12 2xl:max-w-[1440px]"
+    <div
+
+      className="flex flex-col lg:flex-row items-center gap-y-4 lg:gap-x-4 m-8 lg:m-24 lg:h-[480px] w-11/12 lg:w-10/12 2xl:max-w-[1556px]"
     >
       <Image src='/cta.png' alt="contact" width={600} height={480} className="order-last lg:order-none md:w-full lg:w-auto md:h-full" />
 
@@ -28,7 +25,7 @@ const Contact = () => {
           <Button title="Join" fill className="px-8 lg:px-12" />
         </div>
       </div>
-    </motion.div>
+    </div>
   )
 }
 

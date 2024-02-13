@@ -1,4 +1,3 @@
-'use client'
 
 import Image from "next/image"
 import Button from "./Button"
@@ -13,30 +12,21 @@ const Collection = () => {
   return (
     <div className="flex flex-col lg:items-center gap-y-14 w-full 2xl:w-[1440px] px-6 lg:px-32 relative">
       <div className="hidden lg:inline absolute right-0 !-translate-y-[100px]">
-          <motion.div
-            initial={{ opacity: 0, scale: 1.2,  }}
-            whileInView={{ opacity: 1, scale: 1 }}
+          <div
+
           >
             <Image src='/collection-mid-droplet.svg' alt="droplet" width={58} height={57} />
-          </motion.div>
-          <motion.div
-            initial={{ opacity: 0, scale: 1.2,  }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 0.1}}>
+          </div>
+          <div>
             <Image src='/collection-sm-droplet.svg' alt="droplet" width={24} height={24} />
-          </motion.div>
-          <motion.div
-            initial={{ opacity: 0, scale: 1.2,  }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 0.2 }}>
+          </div>
+          <div>
             <Image src='/collection-big-droplet.svg' alt="droplet" width={251} height={256} />
-          </motion.div>
+          </div>
       </div>
       <h2 className={`${myFont.className} font-bold text-[32px] lg:text-[40px] text-center lg:text-start`}>Wellness Wonders: Explore Our Collection</h2>
-        <motion.div
-          initial={{ opacity: 0, scale: 0.5, y: '100px' }}
-          whileInView={{ opacity: 1, scale: 1, y: 0 }}
-          transition={{ duration: 0.3 }}
+        <div
+
           className="flex flex-row gap-x-4 lg:gap-x-8 lg:w-full lg:justify-center relative overflow-scroll lg:overflow-visible"
         >
           <div className="flex flex-row gap-x-4 lg:gap-x-8 min-w-fit lg:w-full lg:justify-center overflow-scroll lg:overflow-visible">
@@ -101,19 +91,17 @@ const Collection = () => {
             })
           }
           </div>
-        </motion.div>
+        </div>
 
 
       <Button title="View All" fill className="mx-auto" />
 
-      <motion.div
-            initial={{ opacity: 0, scale: 1.2  }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 0.3}}
+      <div
+
             className="absolute -bottom-64 right-0 z-0 opacity-100"
           >
             <Image src='/banner-droplet.svg' alt="droplet" width={156} height={151} />
-          </motion.div>
+          </div>
     </div>
   )
 }
