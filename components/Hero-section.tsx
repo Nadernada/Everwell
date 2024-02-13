@@ -92,7 +92,7 @@ const Hero = () => {
                 </motion.div>
               ) : (
                 <div key={i} className="hidden lg:flex flex-row items-center justify-center gap-x-6">
-                  <div className="flex flex-col justify-center items-center text-center h-[320px]">
+                  <div className="flex flex-col justify-stretch items-center text-center h-[320px]">
                     <motion.div
                       initial={{ opacity: 0, scale: 0.5, y: '100px' }}
                       animate={{ opacity: 1, scale: 1, y: 0 }}
@@ -102,9 +102,11 @@ const Hero = () => {
                       <Image src={item.src} width={65} height={165} alt="bottle" className="object-cover" />
                     </motion.div>
     
-                    <h3 className={`text-2xl text-primary font-bold ${myFont.className}`}>{item.minTitle}</h3>
-                    <p className="text-lg pb-4">Only for $30</p>
-                    <Button title="Add to Cart" className="outline-black text-black px-6 py-2 text-xs" />
+                    <>
+                      <h3 className={`text-2xl text-primary font-bold mt-auto ${myFont.className}`}>{item.minTitle}</h3>
+                      <p className="text-lg pb-4">Only for $30</p>
+                      <Button title="Add to Cart" className="outline-black text-black px-6 py-2 text-xs" />
+                    </>
                   </div>
                 </div>              
               )
