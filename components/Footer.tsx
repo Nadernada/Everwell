@@ -25,7 +25,7 @@ const paymentMethods = [
 
 const Footer = () => {
   return (
-    <div className="w-full bg-primary text-white p-6 lg:p-20 mt-12 flex flex-col rounded-t-3xl xl:max-w-[1440px]">
+    <div className="w-full bg-primary text-white p-6 lg:p-20 mt-12 flex flex-col rounded-t-3xl xl:max-w-[1440px] overflow-hidden">
       <div className="flex flex-col lg:flex-row gap-y-12 justify-between pb-12">
         <div className="flex flex-row lg:flex-col gap-y-4">
           <div className="flex flex-col gap-y-3">

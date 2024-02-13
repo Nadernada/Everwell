@@ -62,7 +62,7 @@ const Hero = () => {
         <motion.div
           initial={{ opacity: 0, scale: 0.5 }}
           animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.7 }}
+          transition={{ duration: 0.4 }}
           className="flex flex-col gap-y-6 lg:w-1/3"
         >
           <h1 className={`text-[38px] lg:text-[48px] leading-[52px] lg:leading-[66px] font-bold mt-6 lg:mt-0 ${myFontMedium.className}`}>Nurturing Wellness,<br /> Nourishing Lives.</h1>
@@ -75,7 +75,7 @@ const Hero = () => {
         <motion.div
           initial={{ opacity: 0, scale: 0.5}}
           animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.5, delay: 0.1 }}
+          transition={{ duration: 0.3, delay: 0.05 }}
           className="flex flex-row gap-x-6 flex-1"
         >
           {            
@@ -96,7 +96,7 @@ const Hero = () => {
                     <motion.div
                       initial={{ opacity: 0, scale: 0.5, y: '100px' }}
                       animate={{ opacity: 1, scale: 1, y: 0 }}
-                      transition={{ duration: 0.5, delay: 0.2 }}
+                      transition={{ duration: 0.5, delay: 0.1 }}
                       className="w-[70px] h-fit relative"
                     >
                       <Image src={item.src} width={65} height={165} alt="bottle" className="object-cover" />
