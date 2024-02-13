@@ -69,7 +69,7 @@ function Carousel({images}: any, className: string) {
           <Image src='/icons/right-chevron.svg' alt='chevron' width={15} height={15} className='max-w-5 text-primary' />
         </div>
     </div>
-    <div className='flex flex-row justify-center items-center gap-x-2'>
+    <div className='flex lg:hidden flex-row justify-center items-center gap-x-2'>
       {
         dummyBlogs.map((blog, i) => (
           <div key={blog.title} className={`w-2 h-2 rounded-full ${i == currentIndex ? 'bg-green-700' : 'bg-green-200'}`} />
