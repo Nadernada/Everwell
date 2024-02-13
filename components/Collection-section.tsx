@@ -11,7 +11,7 @@ const myFont = localFont({ src: '../public/RecklessNeue-Regular.woff2' })
 
 const Collection = () => {
   return (
-    <div className="flex flex-col md:items-center gap-y-14 w-full px-6 md:px-32 relative">
+    <div className="flex flex-col md:items-center gap-y-14 w-full md:w-[1440px] px-6 md:px-32 relative">
       <div className="hidden md:inline absolute right-0 !-translate-y-[100px]">
           <motion.div
             initial={{ opacity: 0, scale: 1.2,  }}
@@ -37,8 +37,9 @@ const Collection = () => {
           initial={{ opacity: 0, scale: 0.5, y: '100px' }}
           whileInView={{ opacity: 1, scale: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="flex flex-row gap-x-4 md:gap-x-8 w-full md:w-2/3"
+          className="flex flex-row gap-x-4 md:gap-x-8 w-fit md:w-full md:justify-center relative overflow-visible"
         >
+          <div className="flex flex-row gap-x-4 md:gap-x-8 w-fit md:w-full md:justify-center">
           {
             dummyData.map((item, i) => {
               return (
@@ -46,8 +47,8 @@ const Collection = () => {
                     group
                     flex
                     flex-col
-                    w-full
-                    md:w-4/12
+                    w-[360px]
+                    md:w-3/12
                     rounded-lg
                     gap-y-2
                     py-6
@@ -60,7 +61,8 @@ const Collection = () => {
                       : i == 1 ? 'from-pink-300'
                       : 'from-yellow-300'
                     }
-                    to-transparent`
+                    to-transparent
+                    `
                   }>
                     {
                       item.new && (
@@ -96,6 +98,7 @@ const Collection = () => {
               )
             })
           }
+          </div>
         </motion.div>
 
 

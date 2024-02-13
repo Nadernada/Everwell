@@ -104,3 +104,35 @@ export const dummyFavoriteData = [
     new: true
   },
 ]
+
+export const footerLinks = [
+  {
+    title: 'Company',
+    links: [
+      'About',
+      'Shop',
+      'Blog',
+      'Cart',
+      'Affiliate program'
+    ]
+  },
+  {
+    title: 'Help',
+    links: [
+      'Help Center',
+      'Contact Us',
+      'Community',
+      'Terms & Conditions',
+      'Privacy Policy'
+    ]
+  },
+  {
+    title: 'FAQ',
+    links: [
+      'Products',
+      'Ordering & Shipping',
+      'Wellness Quiz',
+      'Returns & Refunds',
+    ]
+  }
+]

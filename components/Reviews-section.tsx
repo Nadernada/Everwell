@@ -23,7 +23,7 @@ const Reviews = () => {
               className="w-[150px] flex flex-row gap-x-4 items-center banner-animation relative"
             >
                 <Image src='/Everwell Bottle No Shadow.png' width={18} height={57} alt="bottle" className="w-[18px] h-[57px]" />
-                <Image src='/Logo.png' width={96} height={24} alt="logo" className="w-[96px] h-[24px]" />
+                <Image src='/Logo.svg' width={96} height={24} alt="logo" className="w-[96px] h-[24px]" />
             </div>
           ))
         }
@@ -33,7 +33,7 @@ const Reviews = () => {
         initial={{ opacity: 0, scale: 0.5}}
         whileInView={{ opacity: 1, scale: 1}}
         transition={{ duration: 0.2 }}
-        className="md:p-12 w-full flex flex-col md:flex-row md:gap-x-2 justify-center items-center"
+        className="md:p-12 w-full flex flex-col md:flex-row md:gap-x-2 justify-center"
       >
         <motion.div
           initial={{ opacity: 0, scale: 0.5, y: '100px' }}

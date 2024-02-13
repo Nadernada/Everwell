@@ -1,3 +1,4 @@
+import { footerLinks } from "@/constants"
 import Image from "next/image"
 
 const companyLinks = [
@@ -44,7 +45,7 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="flex flex-col md:flex-row justify-center gap-y-12 md:gap-x-24">
+        <div className="hidden md:flex flex-col md:flex-row justify-center gap-y-12 md:gap-x-24">
           <div className="flex flex-col gap-y-4">
             <p className="uppercase text-lg">company</p>
             {
@@ -71,9 +72,33 @@ const Footer = () => {
             </div>
           </div>
         </div>
+
+        <div className="flex md:hidden flex-col md:flex-row justify-center gap-y-3">
+          {
+            footerLinks.map(item => (
+              <details key={item.title} className="py-3">
+              <summary className="text-lg leading-6 text-slate-900 dark:text-white font-semibold select-none uppercase flex flex-row">
+                {item.title}
+                <span className="ms-auto">
+                  <Image src='/icons/down-arrow.svg' alt="arrow" width={18} height={18} />
+                </span>
+              </summary>
+              <div className="mt-3 text-sm leading-6 text-slate-600 dark:text-slate-400 flex flex-col gap-y-3">
+              {
+                item.links.map(link => (
+                  <p key={link} className="text-sm font-thin text-gray-300 hover:text-gray-500 cursor-pointer">{link}</p>
+                ))
+              }
+              </div>
+            </details>
+            ))
+          }
+        </div>
       </div>
 
-      <div className="w-full flex flex-col">
+
+
+      <div className="w-full flex flex-col items-center md:items-stretch">
         <div className="h-[1px] bg-white w-full"/>
 
         <div className="flex flex-col md:flex-row gap-y-4 justify-between py-4">

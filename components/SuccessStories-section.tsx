@@ -10,10 +10,10 @@ const myFont = localFont({ src: '../public/RecklessNeue-Medium.woff2' })
 
 
 const people = [
-  '/Person3Big.png',
+  '/Person3Big.svg',
   '/Person2Big.png',
   '/Person1Big.png',
-  '/Person4Big.png'
+  '/Person4Big.svg'
 ]
 
 const SuccessStories = () => {
@@ -36,7 +36,7 @@ const SuccessStories = () => {
               className="group relative"
               key={i}
             >
-              <Image src={item} alt='person' width={340} height={400} className="relative z-0"/>
+              <Image src={item} alt='person' width={340} height={400} className={`relative z-0 ${i == 0 ? 'md:rounded-l-2xl' : i == 3 ? 'md:rounded-r-2xl' : ''}`}/>
               <div className="group-hover:opacity-100 opacity-0 bg-gray-500/40 absolute top-0 left-0 z-10 w-full h-full flex items-end justify-center pb-6 transition-all">
                 <Button title="Read More" className="bg-white text-primary outline-none cursor-pointer" />
               </div>
@@ -44,6 +44,7 @@ const SuccessStories = () => {
           ))
         }
       </div>
+      
     </motion.div>
   )
 }

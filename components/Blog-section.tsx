@@ -2,10 +2,11 @@
 
 import Image from "next/image"
 import { motion } from "framer-motion"
+import Carousel from "./Carousel"
 
 
 
-const dummyBlogs = [
+export const dummyBlogs = [
   {
     src: '/blog1.png',
     title: 'The healing Power of Mindful Nutrition: A Holistic Approach'
@@ -37,7 +38,7 @@ const Blog = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
             key={blog.title}
-            className="relative w-full md:w-3/12 flex justify-center"
+            className="relative w-full md:w-3/12 hidden md:flex justify-center"
           >
             <Image src={blog.src} alt="blog-post" width={375} height={360} className="w-10/12 h-full md:w-[375px] md:h-auto" />
 
@@ -57,6 +58,8 @@ const Blog = () => {
           </motion.div>
         ))
       }
+      
+      <Carousel images={dummyBlogs} className='' />
     </div>
   )
 }

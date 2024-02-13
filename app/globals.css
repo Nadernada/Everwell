@@ -47,6 +47,10 @@ main {
   width: 100%;
 }
 
+summary::marker {
+  color: transparent;
+}
+
 .banner-animation {
   animation: moveLeftRight 4s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite alternate; /* animation name, duration, timing function, iteration count, direction */
 }

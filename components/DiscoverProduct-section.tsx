@@ -16,7 +16,7 @@ const DiscoverProduct = () => {
       transition={{ duration: 0.5 }}
       className="bg-primary rounded-se-[150px] md:rounded-se-[200px] md:rounded-3xl pt-16 px-8 md:px-0 md:py-0  md:m-12 flex flex-col md:flex-row justify-between gap-y-0 md:gap-x-14 md:w-11/12"
     >
-      <div className="flex flex-col justify-center gap-y-12">
+      <div className="flex flex-col justify-center gap-y-12 md:p-12">
         <p className={myFont.className + ' text-white text-[32px] md:text-[64px] leading-[38px] md:leading-[72px]'}>Discover Your Ideal<br/><span className='font-bold'>EverWell Product</span></p>
         <Button title="Take the Quiz" className="bg-white text-primary outline-none" />
       </div>

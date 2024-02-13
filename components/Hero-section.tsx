@@ -18,7 +18,7 @@ const myFontMedium = localFont({ src: '../public/RecklessNeue-Medium.woff2' })
 const Hero = () => {
 
   const [bgColor, setBgColor] = useState('from-sky-300')
-  const [isActive, setIsActive] = useState(0)
+  const [isActive, setIsActive] = useState(1)
   const [products, setProducts] = useState(dummyData)
 
   const handleNext = () => {
@@ -84,7 +84,7 @@ const Hero = () => {
                 <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 100 }} key={i} className="flex flex-col justify-center items-center text-center md:pt-20 w-full md:w-6/12 relative transition-all">
                   <Image src={item.bg} height={460} width={440}  alt="bg" className="absolute z-0" />
                   {/* <Image src={item.droplet} height={460} width={440}  alt="bg" className="absolute z-10" /> */}
-                  <Image src={item.src} height={460} width={440}  alt="bottle" className={`relative z-20 main-product ${item.bg === 'pink-bg.svg' ? '-rotate-12 -translate-x-[50px]' : 'md:rotate-12 md:translate-x-[50px] translate-y-12'}  transition-all`} />
+                  <Image src={item.src} height={460} width={440}  alt="bottle" className={`relative z-20 main-product ${item.bg === 'pink-bg.svg' ? '-rotate-12 -translate-x-[70px] translate-y-16 md:translate-y-2' : item.bg === '/blue-bg.svg' ? 'md:rotate-[10deg] md:translate-x-[10px] translate-y-12' : 'md:rotate-12 md:translate-x-[50px] translate-y-12'} translate-x-0 translate-y-0 duration-300 transition-all`} />
     
                   <h3 className={`text-2xl text-primary font-bold ${myFontMedium.className} mt-40 md:mt-20`}>{item.minTitle}</h3>
                   <p className="text-lg pb-4">Only for $30</p>
@@ -111,7 +111,7 @@ const Hero = () => {
             )
           }
 
-            <div className="swiper-button-next me-6 md:me-24" onClick={handleNext}>
+            <div className="swiper-button-next me-6 md:me-24 cursor-pointer" onClick={handleNext}>
               <Image src='/icons/right-arrow.svg' alt="arrow" width={16} height={16} className="hover:scale-150 transition-all scale" />
             </div>
         </motion.div>

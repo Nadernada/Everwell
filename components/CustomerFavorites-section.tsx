@@ -14,7 +14,7 @@ const myFont = localFont({ src: '../public/RecklessNeue-Regular.woff2' })
 
 const CustomerFavorites = () => {
 
-  const [isActive, setIsActive] = useState(0)
+  const [isActive, setIsActive] = useState(1)
   const [products, setProducts] = useState(dummyFavoriteData)
 
   const handleNext = () => {
@@ -51,7 +51,7 @@ const CustomerFavorites = () => {
   }
 
   return (
-    <div className="relative flex flex-col w-full items-center text-center gap-y-4 md:gap-y-24 md:py-24">
+    <div className="relative flex flex-col w-full items-center text-center gap-y-4 md:gap-y-24 pt-24 md:py-24">
       <Image src='/championsText-droplet.png' alt="droplet" width={60} height={50} className="hidden md:inline absolute left-[75%] md:left-[62%] top-20" />
       <h3 className={`${myFont.className} text-[28px] md:text-[44px] text-primary font-bold mb-12`}>Customer Favorites</h3>
 
