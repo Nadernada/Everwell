@@ -24,7 +24,7 @@ const TopProduct = () => {
         initial={{ opacity: 0, scale: 0.5, y: 0 }}
         whileInView={{ opacity: 1, scale: 1, y: 0 }}
         transition={{ duration: 0.2 }}
-        className={`relative bg-gradient-to-b to-transparent w-full flex flex-col lg:flex-row py-10 my-24 lg:px-24 ${bgColor}`}
+        className={`relative bg-gradient-to-b to-transparent w-full flex flex-col lg:flex-row py-10 my-24 px-4 lg:px-24 ${bgColor}`}
       >
         <Swiper
           spaceBetween={50}
@@ -39,7 +39,7 @@ const TopProduct = () => {
               ({ isActive }) => {
                 isActive ? setBgColor('from-yellow-200') : null
                 return (
-                  <>
+                  <div className="flex flex-col justify-center items-center lg:flex-row">
                     <motion.div
                       initial={{ opacity: 0, scale: 0.5 }}
                       whileInView={{ opacity: 1, scale: 1 }}
@@ -52,7 +52,7 @@ const TopProduct = () => {
                     </motion.div>
 
                     <Image src='/TopProductGold.png' alt="bottle" width={650} height={650} className="w-[350px] lg:w-[650px] "/>
-                  </>
+                  </div>
                 )
               }
             }

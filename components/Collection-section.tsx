@@ -37,9 +37,9 @@ const Collection = () => {
           initial={{ opacity: 0, scale: 0.5, y: '100px' }}
           whileInView={{ opacity: 1, scale: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="flex flex-row gap-x-4 lg:gap-x-8 w-fit lg:w-full lg:justify-center relative overflow-visible"
+          className="flex flex-row gap-x-4 lg:gap-x-8 lg:w-full lg:justify-center relative overflow-scroll lg:overflow-visible"
         >
-          <div className="flex flex-row gap-x-4 lg:gap-x-8 w-fit lg:w-full lg:justify-center">
+          <div className="flex flex-row gap-x-4 lg:gap-x-8 min-w-fit lg:w-full lg:justify-center overflow-scroll lg:overflow-visible">
           {
             dummyData.map((item, i) => {
               return (
@@ -47,7 +47,7 @@ const Collection = () => {
                     group
                     flex
                     flex-col
-                    w-[360px]
+                    !w-[360px]
                     lg:w-3/12
                     rounded-lg
                     gap-y-2
@@ -71,13 +71,13 @@ const Collection = () => {
                         </div>
                       )
                     }
-                    <div className={`w-full h-[285px] relative flex items-center ${i!==1 ?' justify-end group-hover:justify-center' : 'justify-center'}`}>
-                      <Image src={item.bg} width={320} height={240} className="group-hover:opacity-100 opacity-0 h-full w-auto absolute top-0 left-0 z-0 transition-all scale-110"  alt="bottle" /> 
+                    <div className={`w-full h-[285px] relative flex items-center ${i!==1 ?' lg:justify-end group-hover:justify-center' : 'justify-center'}`}>
+                      <Image src={item.bg} width={320} height={240} className="group-hover:opacity-100 opacity-0 lg:h-full lg:w-auto h-auto w-full absolute top-4 lg:top-0 lg:left-12 z-0 transition-all scale-110"  alt="bottle" /> 
                       <Image src={item.srcConShadow} width={320} height={240} className="group-hover:hidden h-full w-auto relative z-10 transition-all" alt="bottle" /> 
-                      <Image src={item.src} width={320} height={240} className={`hidden group-hover:inline h-full w-auto relative z-10 ${i==1 ? 'group-hover:-rotate-[10deg] -translate-x-5' : ' group-hover:rotate-[10deg] translate-x-5'} translate-y-[-50px]  transition-all`} alt="bottle" /> 
+                      <Image src={item.src} width={320} height={240} className={`hidden group-hover:inline h-full w-auto relative z-10 ${i==1 ? 'group-hover:-rotate-[10deg] lg:-translate-x-5 scale-[85%] lg:scale-100' : ' group-hover:rotate-[10deg] lg:translate-x-5 scale-[85%] lg:scale-100'} lg:translate-y-[-50px]  transition-all`} alt="bottle" /> 
                     </div>
 
-                    <p className="font-semibold">{item.title}</p>
+                    <p className="font-semibold mt-12 lg:mt-0">{item.title}</p>
                     <div className="flex flex-row gap-x-2">
                       <Image src='/stars.svg' alt="stars" width={75} height={13} />
                       <p>4.5/5</p>

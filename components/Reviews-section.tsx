@@ -46,7 +46,7 @@ const Reviews = () => {
           <Button title="View All" className="bg-white text-primary outline-none" />
         </motion.div>
 
-        <div className="grid grid-cols-3 grid-rows-3">
+        <div className="grid grid-cols-3 grid-rows-3 bg-gray-100">
           {
             dummyReviews.map((review, i) => (
               <motion.div

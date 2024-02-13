@@ -49,7 +49,7 @@ function Carousel({images}: any, className: string) {
           key={dummyBlogs[currentIndex].title}
           className="relative w-full justify-center"
         >
-          <img src={dummyBlogs[currentIndex].src} />
+          <img src={dummyBlogs[currentIndex].src} className='md:w-full'/>
 
           <motion.div
             initial={{ opacity: 0, x: '-50%', y: '100px' }}

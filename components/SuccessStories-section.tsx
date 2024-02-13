@@ -26,7 +26,7 @@ const SuccessStories = () => {
     >
       <h3 className={`${myFont.className}  text-[24px] lg:text-[44px] text-primary font-bold`}>Success Stories</h3>
       <p className="text-sm w-10/12 lg:w-4/12">Read the real-life experiences of individuals who've embraced the EverWell journey and transformed their wellness.</p>
-      <div className="mt-8 grid grid-cols-1 lg:grid-cols-4">
+      <div className="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
         {
           people.map((item, i) => (
             <motion.div

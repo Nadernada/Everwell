@@ -117,7 +117,7 @@ const CustomerFavorites = () => {
               )
             })
           }
-            <div className="swiper-button-next ml-24" onClick={handleNext} />
+            <div className="swiper-button-next ml-6 lg:ml-24" onClick={handleNext} />
         </div>
 
       <Button title="View All" fill />
