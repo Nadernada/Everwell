@@ -62,7 +62,7 @@ const Hero = () => {
         <motion.div
           initial={{ opacity: 0, scale: 0.5 }}
           animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.4 }}
+          transition={{ duration: 0.1 }}
           className="flex flex-col gap-y-6 lg:w-1/3"
         >
           <h1 className={`text-[38px] lg:text-[48px] leading-[52px] lg:leading-[66px] font-bold mt-6 lg:mt-0 ${myFontMedium.className}`}>Nurturing Wellness,<br /> Nourishing Lives.</h1>

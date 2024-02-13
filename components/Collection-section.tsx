@@ -16,19 +16,19 @@ const Collection = () => {
           <motion.div
             initial={{ opacity: 0, scale: 1.2,  }}
             whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 0.3 }}>
+          >
             <Image src='/collection-mid-droplet.svg' alt="droplet" width={58} height={57} />
           </motion.div>
           <motion.div
             initial={{ opacity: 0, scale: 1.2,  }}
             whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 0.4}}>
+            transition={{ delay: 0.1}}>
             <Image src='/collection-sm-droplet.svg' alt="droplet" width={24} height={24} />
           </motion.div>
           <motion.div
             initial={{ opacity: 0, scale: 1.2,  }}
             whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 0.5 }}>
+            transition={{ delay: 0.2 }}>
             <Image src='/collection-big-droplet.svg' alt="droplet" width={251} height={256} />
           </motion.div>
       </div>
@@ -57,6 +57,8 @@ const Collection = () => {
                     bg-gradient-to-b
                     hover:lg:scale-110
                     transition-all
+                    duration-300
+                    ease-out
                     ${i == 0 ? 'from-sky-300'
                       : i == 1 ? 'from-pink-300'
                       : 'from-yellow-300'
@@ -107,7 +109,7 @@ const Collection = () => {
       <motion.div
             initial={{ opacity: 0, scale: 1.2  }}
             whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 0.5}}
+            transition={{ delay: 0.3}}
             className="absolute -bottom-64 right-0 z-0 opacity-100"
           >
             <Image src='/banner-droplet.svg' alt="droplet" width={156} height={151} />
