@@ -54,14 +54,14 @@ const Reviews = () => {
                 initial={{ opacity: 0, scale: 0.5}}
                 whileInView={{ opacity: 1, scale: 1}}
                 transition={{ duration: 0.5, delay: i * 0.1 }}
-                className={`flex flex-col items-center justify-center text-[9.5px] max-w-[160px] gap-y-8 ${review.type === 'review' ? ' p-4' : ''}`}
+                className={`flex flex-col items-center justify-center text-[9.5px] md:max-w-[259px] lg:max-w-[160px] gap-y-8 ${review.type === 'review' ? ' p-4' : ''}`}
               >
                 {
                   review.type === 'picture' ? (
-                    <Image src={review.src || '/Person1.png'} width={159} height={173} alt="person" className="" />
+                    <Image src={review.src || '/Person1.png'} width={259} height={273} alt="person" className="" />
                   ) : (
                     <>
-                      <p className="text-center">{review.text}</p>
+                      <p className="text-center md:text-base lg:text-xs">{review.text}</p>
                       <div className="flex flex-col gap-y-1 items-center">
                         <p className="font-semibold ">Sarah Thompson</p>
                         <div className="flex flex-row gap-x-2 scale-75">

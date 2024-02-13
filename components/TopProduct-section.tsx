@@ -19,7 +19,7 @@ const TopProduct = () => {
   const [bgColor, setBgColor] = useState('from-yellow-200')
 
   return (
-    <div className="w-full bg-gradient-to-b lg:mt-24">
+    <div className="w-full bg-gradient-to-b lg:mt-24 flex items-center justify-center">
       <motion.div
         initial={{ opacity: 0, scale: 0.5, y: 0 }}
         whileInView={{ opacity: 1, scale: 1, y: 0 }}
@@ -32,7 +32,7 @@ const TopProduct = () => {
           modules={[Navigation, Pagination]}
           navigation
           pagination={true}
-          className="w-full overflow-visible md:h-fit xl:max-w-[1440px]"
+          className="w-full overflow-visible xl:max-w-[1440px] flex justify-center"
         >
           <SwiperSlide className="w-full flex flex-col lg:flex-row lg:items-center justify-center gap-y-12">
             {
