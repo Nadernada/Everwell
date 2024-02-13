@@ -42,15 +42,19 @@ function Carousel({images}: any, className: string) {
       <div className="prev-div w-4 h-4" onClick={goToPrevSlide}>
         <Image src='/icons/left-chevron.svg' alt='chevron' width={15} height={15} className='max-w-5 text-primary' />
       </div>
-        <div
-
+        <motion.div
+          initial={{ opacity: 0.5, x: '-50px' }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.3 }}
           key={dummyBlogs[currentIndex].title}
           className="relative w-full justify-center"
         >
           <img src={dummyBlogs[currentIndex].src} className='md:w-full'/>
 
-          <div
-
+          <motion.div
+            initial={{ opacity: 0, x: '-50%', y: '100px' }}
+            whileInView={{ opacity: 1, x: '-50%', y: 0 }}
+            transition={{ duration: 0.3, delay: 0.05 }}
             className="absolute -bottom-[30px] left-[50%] -translate-x-[50%] rounded-xl bg-white shadow-lg shadow-slate-200 p-4 lg:p-6 flex flex-col gap-y-2 lg:gap-y-4 w-11/12"
           >
             <div className="flex flex-row justify-between text-xs md:text-base text-gray-400">
@@ -59,8 +63,8 @@ function Carousel({images}: any, className: string) {
             </div>
 
             <p className="text-sm md:text-lg lg:text-lg font-bold">{dummyBlogs[currentIndex].title.length > 52 ? (dummyBlogs[currentIndex].title.slice(0,52) + '...') : dummyBlogs[currentIndex].title}</p>
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
         <div className="next-div w-4 h-4" onClick={goToNextSlide}>
           <Image src='/icons/right-chevron.svg' alt='chevron' width={15} height={15} className='max-w-5 text-primary' />
         </div>

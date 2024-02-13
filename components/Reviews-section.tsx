@@ -1,4 +1,4 @@
-
+'use client'
 
 import Image from "next/image"
 import Button from "./Button"
@@ -29,25 +29,31 @@ const Reviews = () => {
         }
       </div>
 
-      <div
-
-        className="lg:p-12 w-full flex flex-col lg:flex-row lg:gap-x-2 justify-center 2xl:max-w-[1556px]"
+      <motion.div
+        initial={{ opacity: 0, scale: 0.5}}
+        whileInView={{ opacity: 1, scale: 1}}
+        transition={{ duration: 0.3 }}
+        className="lg:p-12 w-full flex flex-col lg:flex-row lg:gap-x-2 justify-center xl:max-w-[1556px]"
       >
-        <div
-
+        <motion.div
+          initial={{ opacity: 0, scale: 0.5, y: '100px' }}
+          whileInView={{ opacity: 1, scale: 1, y: 0 }}
+          transition={{ duration: 0.3 }}
           className="bg-[#89F09C] rounded-ss-[150px] lg:rounded-ss-[200px] rounded-lg py-24 px-6 lg:px-12 flex flex-col justify-center lg:w-7/12 gap-y-14"
         >
           <p className={myFont.className + ' font-bold text-primary text-[28px] lg:text-[48px] leading-[38px] lg:leading-[58px]'}>Echoes of Wellness: Dive into the EverWell Experience through Customer Reviews.</p>
 
           <Button title="View All" className="bg-white text-primary outline-none" />
-        </div>
+        </motion.div>
 
         <div className="grid grid-cols-3 grid-rows-3 bg-gray-100">
           {
             dummyReviews.map((review, i) => (
-              <div
+              <motion.div
                 key={i}
-
+                initial={{ opacity: 0, scale: 0.5}}
+                whileInView={{ opacity: 1, scale: 1}}
+                transition={{ duration: 0.3, delay: i * 0.05 }}
                 className={`flex flex-col items-center justify-center text-[9.5px] md:max-w-[259px] lg:max-w-[160px] gap-y-8 ${review.type === 'review' ? ' p-4' : ''}`}
               >
                 {
@@ -67,11 +73,11 @@ const Reviews = () => {
                   )
                 }
 
-              </div>
+              </motion.div>
             ))
           }
         </div>
-      </div>
+      </motion.div>
     </>
   )
 }

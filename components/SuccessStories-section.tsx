@@ -1,3 +1,4 @@
+'use client'
 
 import Image from "next/image"
 import Button from "./Button"
@@ -17,8 +18,10 @@ const people = [
 
 const SuccessStories = () => {
   return (
-    <div
-
+    <motion.div
+      initial={{ opacity: 0, x: '-100px' }}
+      whileInView={{ opacity: 1, x: 0 }}
+      transition={{ duration: 0.3 }}
       className="flex flex-col items-center text-center gap-y-2 lg:gap-y-4 py-12 lg:py-24"
     >
       <h3 className={`${myFont.className}  text-[24px] lg:text-[44px] text-primary font-bold`}>Success Stories</h3>
@@ -26,8 +29,10 @@ const SuccessStories = () => {
       <div className="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
         {
           people.map((item, i) => (
-            <div
-
+            <motion.div
+              initial={{ opacity: 0, y: '100px' }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.3, delay: i * 0.1 }}
               className="group relative"
               key={i}
             >
@@ -35,12 +40,12 @@ const SuccessStories = () => {
               <div className="group-hover:opacity-100 opacity-0 bg-gray-500/40 absolute top-0 left-0 z-10 w-full h-full flex items-end justify-center pb-6 transition-all">
                 <Button title="Read More" className="bg-white text-primary outline-none cursor-pointer" />
               </div>
-            </div>
+            </motion.div>
           ))
         }
       </div>
       
-    </div>
+    </motion.div>
   )
 }
 
