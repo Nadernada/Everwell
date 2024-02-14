@@ -86,7 +86,7 @@ const CustomerFavorites = () => {
                     shadow-gray-200`
                   }>
                     <div className="w-full h-[270px] relative flex items-center justify-center mb-4">
-                      <Image src={item.src} width={320} height={240} className={`${i == 1 && '-rotate-12'} h-full w-auto relative z-10 transition-all`} alt="bottle" /> 
+                      <Image src={item.src} width={320} height={240} className={`${i == 1 && '-rotate-12'} h-full w-auto relative z-10 transition-all duration-200`} alt="bottle" /> 
                     </div>
 
                     <p className="font-bold text-start">{item.title}</p>

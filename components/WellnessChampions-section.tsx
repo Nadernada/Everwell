@@ -19,7 +19,7 @@ const Champions = () => {
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.3 }}
         >
-          <Image src='/championsLeft.svg' alt="champions" width={502} height={150} className="h-[100px] lg:h-[170px] scale-125 lg:scale-100 -translate-x-12 lg:-translate-x-24"/>
+          <Image src='/champions-left.svg' alt="champions" width={502} height={150} className="h-[100px] lg:h-[170px] scale-125 lg:scale-100 -translate-x-12 lg:-translate-x-24"/>
         </motion.div>
 
         <motion.div
@@ -37,7 +37,7 @@ const Champions = () => {
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.3 }}
         >
-          <Image src='/championsRight.svg' alt="champions" width={502} height={150} className="h-[100px] lg:h-[170px] scale-125 lg:scale-100 translate-x-12 lg:translate-x-24"/>
+          <Image src='/champions-right.svg' alt="champions" width={502} height={150} className="h-[100px] lg:h-[170px] scale-125 lg:scale-100 translate-x-12 lg:translate-x-24"/>
       </motion.div>
       </div>
 
