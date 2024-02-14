@@ -37,6 +37,14 @@ main {
 
 }
 
+.swiper-pagination-bullet:first-child {
+  background-color: #fde047;
+}
+
+.swiper-pagination-bullet:last-child {
+  background-color: #f9a8d4;
+}
+
 .main-product {
   width: 127px !important;
   height: 400px !important;
