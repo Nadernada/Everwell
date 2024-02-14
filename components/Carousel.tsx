@@ -5,7 +5,7 @@ import Image from 'next/image';
 import React, { useState } from 'react';
 import { dummyBlogs } from './Blog-section';
 
-function Carousel({images, className, children}: {images: string, className: string, children: React.ReactNode}) {
+function Carousel({images, className, children}: {images: any, className: string, children: React.ReactNode}) {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const goToNextSlide = () => {
@@ -42,7 +42,6 @@ function Carousel({images, className, children}: {images: string, className: str
       <div className="prev-div w-4 h-4" onClick={goToPrevSlide}>
         <Image src='/icons/left-chevron.svg' alt='chevron' width={15} height={15} className='max-w-5 text-primary' />
       </div>
-      {children}
       <motion.div
         initial={{ opacity: 0.5, x: '-50px' }}
         whileInView={{ opacity: 1, x: 0 }}
@@ -51,6 +50,8 @@ function Carousel({images, className, children}: {images: string, className: str
         className="relative w-full justify-center"
       >
         <img src={dummyBlogs[currentIndex].src} className='md:w-full'/>
+
+        {children}
 
         <motion.div
           initial={{ opacity: 0, x: '-50%', y: '100px' }}

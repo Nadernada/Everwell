@@ -59,7 +59,9 @@ const Blog = () => {
         ))
       }
       
-      <Carousel images={dummyBlogs} className='' />
+      <Carousel images={dummyBlogs} className=''>
+        <div></div>
+      </Carousel>
     </div>
   )
 }
