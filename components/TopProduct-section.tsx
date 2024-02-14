@@ -25,7 +25,7 @@ const TopProduct = () => {
         initial={{ opacity: 0, scale: 0.5, y: 0 }}
         whileInView={{ opacity: 1, scale: 1, y: 0 }}
         transition={{ duration: 0.3 }}
-        className={`relative bg-gradient-to-b to-transparent w-full flex flex-col lg:flex-row py-10 lg:pb-32 my-24 md:my-0 px-4 lg:px-24 ${bgColor}`}
+        className={`relative bg-gradient-to-b to-transparent w-full h-[850px] lg:h-[auto] flex flex-col lg:flex-row py-10 lg:pb-32 my-24 md:my-0 px-0 lg:px-24 ${bgColor}`}
       >
         <Swiper
           spaceBetween={50}
@@ -40,7 +40,7 @@ const TopProduct = () => {
               ({ isActive }) => {
                 isActive ? setBgColor('from-yellow-200') : null
                 return (
-                  <div className="flex flex-col justify-center items-center lg:flex-row">
+                  <div className="flex flex-col justify-center items-center lg:flex-row gap-y-24 lg:gap-y-0">
                     <motion.div
                       initial={{ opacity: 0, scale: 0.5 }}
                       whileInView={{ opacity: 1, scale: 1 }}
@@ -52,7 +52,7 @@ const TopProduct = () => {
                       <Button title="Buy Now" fill className="mt-4 lg:mt-12"/>
                     </motion.div>
 
-                    <Image src='/TopProductGold.webp' alt="bottle" width={640} height={650} className="w-[350px] lg:w-[640px] "/>
+                    <Image src='/TopProductGold.webp' alt="bottle" width={640} height={650} className="w-[350px] lg:w-[640px] ms-auto"/>
                   </div>
                 )
               }
@@ -75,7 +75,7 @@ const TopProduct = () => {
                       <Button title="Buy Now" fill className="mt-4 lg:mt-12"/>
                     </motion.div>
 
-                    <Image src='/TopProductBlue.webp' alt="bottle" width={389} height={691} className="w-[350px] lg:w-[389px]"/>
+                    <Image src='/TopProductBlue.webp' alt="bottle" width={389} height={691} className="w-[200px] h-auto lg:w-[389px]"/>
                   </>
                 )
               }
@@ -98,7 +98,7 @@ const TopProduct = () => {
                       <Button title="Buy Now" fill className="mt-4 md:mt-12"/>
                       </motion.div>
 
-                      <Image src='/TopProductPink.webp' alt="bottle" width={362} height={676} className="w-[350px] md:w-[362px]"/>
+                      <Image src='/TopProductPink.webp' alt="bottle" width={362} height={676} className="w-[200px] h-auto md:w-[362px]"/>
                     </>
                   )
                 }

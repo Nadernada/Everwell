@@ -9,6 +9,7 @@ import 'swiper/css/navigation'
 
 import { motion } from "framer-motion"
 import { useState } from "react"
+import { Cards } from "./Collection-section"
 
 const myFont = localFont({ src: '../public/RecklessNeue-Regular.woff2' })
 
@@ -55,8 +56,7 @@ const CustomerFavorites = () => {
       <Image src='/championsText-droplet.png' alt="droplet" width={60} height={50} className="hidden lg:inline absolute left-[75%] lg:left-[62%] top-20" />
       <h3 className={`${myFont.className} text-[28px] lg:text-[44px] text-primary font-bold mb-12`}>Customer Favorites</h3>
 
-
-        <div className="w-[70%] flex flex-row gap-x-12 lg:gap-x-48 relative justify-center mx-auto">
+        <div className="hidden lg:flex w-[70%] flex-row gap-x-12 lg:gap-x-48 relative justify-center mx-auto">
           <div className="swiper-button-prev mr-32" onClick={handlePrev} />
 
           {
@@ -110,6 +110,10 @@ const CustomerFavorites = () => {
             })
           }
             <div className="swiper-button-next ml-6 lg:ml-24" onClick={handleNext} />
+        </div>
+
+        <div className="flex flex-col lg:items-center gap-y-14 w-full 2xl:w-[1440px] px-6 lg:px-32 relative">
+          <Cards className='inline lg:hidden' />
         </div>
 
       <Button title="View All" fill />

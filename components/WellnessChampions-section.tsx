@@ -19,7 +19,7 @@ const Champions = () => {
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.3 }}
         >
-          <Image src='/champions-left.svg' alt="champions" width={502} height={150} className="h-[100px] lg:h-[170px] scale-125 lg:scale-100 -translate-x-12 lg:-translate-x-24"/>
+          <Image src='/champions-left.svg' alt="champions" width={502} height={150} className="h-[100px] lg:h-[170px] scale-150 lg:scale-100 -translate-x-12 lg:-translate-x-24"/>
         </motion.div>
 
         <motion.div
@@ -29,7 +29,7 @@ const Champions = () => {
           className="relative flex flex-col items-center gap-y-10 w-2/6"
         >
           <Image src='/championsText-droplet.png' alt="droplet" width={60} height={50} className="hidden lg:inline lg:absolute -right-16 bottom-24" />
-          <h2 className={`${myFontMedium.className} text-[28px] lg:text-[56px] leading-[24px] lg:leading-[64px] text-center text-primary`}>Meet our Wellness Champions</h2>
+          <h2 className={`${myFontMedium.className} text-[24px] lg:text-[56px] leading-[24px] lg:leading-[64px] text-center text-primary`}>Meet our Wellness Champions</h2>
         </motion.div>
 
         <motion.div
@@ -37,7 +37,7 @@ const Champions = () => {
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.3 }}
         >
-          <Image src='/champions-right.svg' alt="champions" width={502} height={150} className="h-[100px] lg:h-[170px] scale-125 lg:scale-100 translate-x-12 lg:translate-x-24"/>
+          <Image src='/champions-right.svg' alt="champions" width={502} height={150} className="h-[100px] lg:h-[170px] scale-150 lg:scale-100 translate-x-12 lg:translate-x-24"/>
       </motion.div>
       </div>
 

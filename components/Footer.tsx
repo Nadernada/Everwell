@@ -83,7 +83,7 @@ const Footer = () => {
                   <Image src='/icons/down-arrow.svg' alt="arrow" width={18} height={18} />
                 </span>
               </summary>
-              <div className="mt-3 text-sm leading-6 text-slate-600 dark:text-slate-400 flex flex-col gap-y-3">
+              <div className="mt-3 text-sm leading-6 text-slate-600 dark:text-slate-400 flex flex-col gap-y-4">
               {
                 item.links.map(link => (
                   <p key={link} className="text-sm font-thin text-gray-300 hover:text-gray-500 cursor-pointer">{link}</p>

@@ -23,7 +23,7 @@ export const dummyBlogs = [
 
 const Blog = () => {
   return (
-    <div className="w-full flex flex-col lg:flex-row px-8 lg:px-24 py-12 mb-24 gap-y-12 lg:gap-x-10 justify-center relative xl:max-w-[1556px]">
+    <div className="w-full flex flex-col lg:flex-row px-8 lg:px-24 pb-12 mb-24 gap-y-12 lg:gap-x-10 justify-center relative xl:max-w-[1556px]">
       <motion.div
         initial={{ opacity: 0, scale: 1.2,  }}
         whileInView={{ opacity: 1, scale: 1 }}
@@ -71,7 +71,7 @@ const Blog = () => {
               <p>27/10/2023</p>
             </div>
 
-            {/* <p className="text-sm md:text-lg lg:text-lg font-bold">{dummyBlogs[currentIndex].title.length > 52 ? (dummyBlogs[currentIndex].title.slice(0,52) + '...') : dummyBlogs[currentIndex].title}</p> */}
+            <p className="text-sm md:text-lg lg:text-lg font-bold">{dummyBlogs[0].title.slice(0,52) + '...'}</p>
           </motion.div>      </Carousel>
     </div>
   )

@@ -72,9 +72,16 @@ summary::marker {
   }
 }
 
-@media only screen and (max-width: 480px) {
+/* @media only screen and (max-width: 480px) {
   .main-product {
     width: 340px !important;
     height: 360px !important;
+  }
+} */
+
+@media only screen and (max-width: 480px) {
+  .swiper-button-next, .swiper-button-prev {
+    content: '';
+    visibility: hidden;
   }
 }

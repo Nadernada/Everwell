@@ -76,7 +76,7 @@ const Hero = () => {
           initial={{ opacity: 0, scale: 0.5}}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.3, delay: 0.05 }}
-          className="flex flex-row gap-x-6 flex-1 pt-12"
+          className="flex flex-row gap-x-6 flex-1 pt-12 justify-center"
         >
           {            
             products.map((item: any, i: number) => 
@@ -84,9 +84,9 @@ const Hero = () => {
                 <motion.div initial={{ opacity: 0, scale: 1.1 }} whileInView={{ opacity: 100, scale: 1 }} key={i} className="flex flex-col justify-center items-center text-center lg:pt-20 w-full lg:w-6/12 relative transition-all">
                   <Image src={item.bg} priority={true} height={460} width={440}  alt="bg" className="absolute z-0 top-0 left-0" />
                   {/* <Image src={item.droplet} height={460} width={440}  alt="bg" className="absolute z-10" /> */}
-                  <Image src={item.src} priority={true} height={400} width={127}  alt="bottle" className={`relative z-20 main-product ${item.bg === '/pink-bg.webp' ? '-rotate-12 -translate-x-[60px] translate-y-20  ' : item.bg === '/blue-bg.webp' ? 'lg:rotate-[10deg] lg:translate-x-[10px]' : 'lg:rotate-12'} translate-x-0 lg:-translate-y-24 duration-300 transition-all`} />
+                  <Image src={item.src} priority={true} height={400} width={127}  alt="bottle" className={`relative z-20 main-product ${item.bg === '/pink-bg.webp' ? '-rotate-12 lg:-translate-x-[60px] lg:translate-y-20  ' : item.bg === '/blue-bg.webp' ? 'rotate-[10deg] lg:translate-x-[10px]' : 'rotate-12'} translate-x-0 lg:-translate-y-24 duration-300 transition-all`} />
     
-                  <h3 className={`text-2xl text-primary font-bold z-20 ${myFontMedium.className} mt-40 lg:mt-0`}>{item.minTitle}</h3>
+                  <h3 className={`text-2xl text-primary font-bold z-20 ${myFontMedium.className} mt-12 lg:mt-0`}>{item.minTitle}</h3>
                   <p className="text-lg pb-4">Only for $30</p>
                   <Button title="Add to Cart" className="outline-black text-black px-6 py-2 text-xs mb-2" />
                 </motion.div>
@@ -114,7 +114,7 @@ const Hero = () => {
           }
 
             <div className="swiper-button-next me-6 lg:me-24 cursor-pointer" onClick={handleNext}>
-              <Image src='/icons/right-arrow.svg' alt="arrow" width={16} height={16} className="hover:scale-150 transition-all scale" />
+              <Image src='/icons/right-arrow.svg' alt="arrow" width={16} height={16} className="lg:hover:scale-150 scale-150 transition-all scale" />
             </div>
         </motion.div>
       </div>
