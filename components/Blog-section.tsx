@@ -60,8 +60,19 @@ const Blog = () => {
       }
       
       <Carousel images={dummyBlogs} className=''>
-        <div></div>
-      </Carousel>
+        <motion.div
+            initial={{ opacity: 0, x: '-50%', y: '100px' }}
+            whileInView={{ opacity: 1, x: '-50%', y: 0 }}
+            transition={{ duration: 0.3, delay: 0.05 }}
+            className="absolute -bottom-[30px] left-[50%] -translate-x-[50%] rounded-xl bg-white shadow-lg shadow-slate-200 p-4 lg:p-6 flex flex-col gap-y-2 lg:gap-y-4 w-11/12"
+          >
+            <div className="flex flex-row justify-between text-xs md:text-base text-gray-400">
+              <p>By Admin</p>
+              <p>27/10/2023</p>
+            </div>
+
+            {/* <p className="text-sm md:text-lg lg:text-lg font-bold">{dummyBlogs[currentIndex].title.length > 52 ? (dummyBlogs[currentIndex].title.slice(0,52) + '...') : dummyBlogs[currentIndex].title}</p> */}
+          </motion.div>      </Carousel>
     </div>
   )
 }
