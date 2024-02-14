@@ -8,15 +8,15 @@ import Carousel from "./Carousel"
 
 export const dummyBlogs = [
   {
-    src: '/blog1.png',
+    src: '/blog1.webp',
     title: 'The healing Power of Mindful Nutrition: A Holistic Approach'
   },
   {
-    src: '/blog2.png',
+    src: '/blog2.webp',
     title: 'From Stress to Serenity" Supporting Your Spirit in a world'
   },
   {
-    src: '/blog3.png',
+    src: '/blog3.webp',
     title: 'Unveiling the Science Behind a Good Night\'s Sleep: Tips for a good night'
   },
 ]
@@ -29,7 +29,7 @@ const Blog = () => {
         whileInView={{ opacity: 1, scale: 1 }}
         transition={{ delay: 0.1 }}
         className="hidden lg:inline absolute right-0 !-translate-y-[50%]">
-        <Image src='/blogDroplet.svg' alt="droplet" width={240} height={200} className="" />
+        <Image src='/blog-droplet.webp' alt="droplet" width={240} height={200} className="" />
       </motion.div>
       {
         dummyBlogs.map((blog) => (

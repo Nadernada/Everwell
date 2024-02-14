@@ -9,10 +9,10 @@ import localFont from 'next/font/local'
 const myFont = localFont({ src: '../public/RecklessNeue-Medium.woff2' })
 
 const dummyPics = [
-  '/social1.png',
-  '/Social2.png',
-  '/Social3.png',
-  '/social4.png',
+  '/social1.webp',
+  '/Social2.webp',
+  '/Social3.webp',
+  '/social4.webp',
 ]
 
 const SocialFeed = () => {

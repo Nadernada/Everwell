@@ -10,10 +10,10 @@ const myFont = localFont({ src: '../public/RecklessNeue-Medium.woff2' })
 
 
 const people = [
-  '/Person3Big.svg',
-  '/Person2Big.png',
-  '/Person1Big.png',
-  '/Person4Big.svg'
+  '/Person3Big.webp',
+  '/Person2Big.webp',
+  '/Person1Big.webp',
+  '/Person4Big.webp'
 ]
 
 const SuccessStories = () => {

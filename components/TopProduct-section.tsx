@@ -51,7 +51,7 @@ const TopProduct = () => {
                       <Button title="Buy Now" fill className="mt-4 lg:mt-12"/>
                     </motion.div>
 
-                    <Image src='/TopProductGold.png' alt="bottle" width={650} height={650} className="w-[350px] lg:w-[650px] "/>
+                    <Image src='/TopProductGold.webp' alt="bottle" width={650} height={650} className="w-[350px] lg:w-[650px] "/>
                   </div>
                 )
               }
@@ -74,7 +74,7 @@ const TopProduct = () => {
                       <Button title="Buy Now" fill className="mt-4 lg:mt-12"/>
                     </motion.div>
 
-                    <Image src='/TopProductBlue.svg' alt="bottle" width={650} height={650} className="w-[350px] lg:w-[650px]"/>
+                    <Image src='/TopProductBlue.webp' alt="bottle" width={650} height={650} className="w-[350px] lg:w-[650px]"/>
                   </>
                 )
               }
@@ -97,7 +97,7 @@ const TopProduct = () => {
                       <Button title="Buy Now" fill className="mt-4 md:mt-12"/>
                       </motion.div>
 
-                      <Image src='/TopProductPink.svg' alt="bottle" width={650} height={650} className="w-[350px] md:w-[650px]"/>
+                      <Image src='/TopProductPink.webp' alt="bottle" width={650} height={650} className="w-[350px] md:w-[650px]"/>
                     </>
                   )
                 }

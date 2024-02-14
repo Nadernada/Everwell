@@ -17,19 +17,19 @@ const Collection = () => {
             initial={{ opacity: 0, scale: 1.2,  }}
             whileInView={{ opacity: 1, scale: 1 }}
           >
-            <Image src='/collection-mid-droplet.svg' alt="droplet" width={58} height={57} />
+            <Image src='/collection-mid-droplet.webp' alt="droplet" width={58} height={57} />
           </motion.div>
           <motion.div
             initial={{ opacity: 0, scale: 1.2,  }}
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.1}}>
-            <Image src='/collection-sm-droplet.svg' alt="droplet" width={24} height={24} />
+            <Image src='/collection-sm-droplet.webp' alt="droplet" width={24} height={24} />
           </motion.div>
           <motion.div
             initial={{ opacity: 0, scale: 1.2,  }}
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.2 }}>
-            <Image src='/collection-big-droplet.svg' alt="droplet" width={251} height={256} />
+            <Image src='/collection-big-droplet.webp' alt="droplet" width={251} height={256} />
           </motion.div>
       </div>
       <h2 className={`${myFont.className} font-bold text-[32px] lg:text-[40px] text-center lg:text-start`}>Wellness Wonders: Explore Our Collection</h2>
@@ -73,10 +73,10 @@ const Collection = () => {
                         </div>
                       )
                     }
-                    <div className={`w-full h-[285px] relative flex items-center ${i!==1 ?' lg:justify-end group-hover:justify-center' : 'justify-center'}`}>
-                      <Image src={item.bg} width={320} height={240} className="group-hover:opacity-100 opacity-0 lg:h-full lg:w-auto h-auto w-full absolute top-4 lg:top-0 lg:left-12 z-0 transition-all scale-110"  alt="bottle" /> 
+                    <div className={`w-full h-[285px] relative flex items-center ${i!==1 ?' lg:justify-end group-hover:justify-center lg:group-hover:justify-center' : 'justify-center'}`}>
+                      <Image src={item.bg} width={320} height={240} className="group-hover:opacity-100 opacity-0 lg:h-full lg:w-auto h-auto w-full absolute top-4 lg:top-0 z-0 transition-all scale-110"  alt="bottle" /> 
                       <Image src={item.srcConShadow} width={320} height={240} className="group-hover:hidden h-full w-auto relative z-10 transition-all" alt="bottle" /> 
-                      <Image src={item.src} width={320} height={240} className={`hidden group-hover:inline h-full w-auto relative z-10 ${i==1 ? 'group-hover:-rotate-[10deg] lg:-translate-x-5 scale-[85%] lg:scale-100' : ' group-hover:rotate-[10deg] lg:translate-x-5 scale-[85%] lg:scale-100'} lg:translate-y-[-50px]  transition-all`} alt="bottle" /> 
+                      <Image src={item.src} width={320} height={240} className={`hidden group-hover:inline h-full w-auto relative z-10 ${i==1 ? 'group-hover:-rotate-[10deg] lg:-translate-x-5 scale-[85%] lg:scale-100' : ' group-hover:rotate-[10deg] lg:translate-x-5 scale-[85%] lg:scale-100'} lg:translate-y-[-50px]  transition-all duration-200`} alt="bottle" /> 
                     </div>
 
                     <p className="font-semibold mt-12 lg:mt-0">{item.title}</p>
@@ -112,7 +112,7 @@ const Collection = () => {
             transition={{ delay: 0.3}}
             className="absolute -bottom-64 right-0 z-0 opacity-100"
           >
-            <Image src='/banner-droplet.svg' alt="droplet" width={156} height={151} />
+            <Image src='/banner-droplet.webp' alt="droplet" width={156} height={151} />
           </motion.div>
     </div>
   )

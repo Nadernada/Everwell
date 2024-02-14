@@ -49,9 +49,9 @@ export const dummyData = [
     price: 130,
     discount: '30%',
     prevPrice: 160,
-    srcConShadow: '/bottle-blue-shadow.svg',
-    src: '/bottle-blue-NS.svg',
-    bg: '/blue-bg.svg',
+    srcConShadow: '/bottle-blue-shadow.webp',
+    src: '/bottle-blue-NS.webp',
+    bg: '/blue-bg.webp',
     bgColor: 'from-sky-300',
     droplet: '',
     minTitle: 'Lung Cleanser'
@@ -60,9 +60,9 @@ export const dummyData = [
     title: 'Focus: "Mind Sharpen"',
     review: '4.5/5',
     price: 120,
-    srcConShadow: '/bottle-pink-NS.svg',
-    src: '/bottle-pink-NS.svg',
-    bg: 'pink-bg.svg',
+    srcConShadow: '/bottle-pink-NS.webp',
+    src: '/bottle-pink-NS.webp',
+    bg: '/pink-bg.webp',
     bgColor: 'from-pink-300',
     droplet: '',
     minTitle: 'Mind Sharpen'
@@ -71,9 +71,9 @@ export const dummyData = [
     title: 'Immunity: "Immune Vitality"',
     review: '4.5/5',
     price: 80,
-    srcConShadow: '/bottle-gold-shadow.svg',
-    src: '/bottle-gold-NS.svg',
-    bg: '/gold-bg.svg',
+    srcConShadow: '/bottle-gold-shadow.webp',
+    src: '/bottle-gold-NS.webp',
+    bg: '/gold-bg.webp',
     bgColor: 'from-yellow-300',
     droplet: '',
     minTitle: 'Immune Vitality',
@@ -94,7 +94,7 @@ export const dummyFavoriteData = [
     title: 'Focus: "Mind Sharpen"',
     review: '4.5/5',
     price: 120,
-    src: '/bottle-pink-NS.svg'
+    src: '/favoritePink.webp'
   },
   {
     title: 'Immunity: "Immune Vitality"',

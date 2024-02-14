@@ -86,14 +86,6 @@ const CustomerFavorites = () => {
                     shadow-gray-200`
                   }>
                     <div className="w-full h-[270px] relative flex items-center justify-center mb-4">
-                      {
-                        item.title == 'Focus: "Mind Sharpen"' && (
-                          <>
-                            <Image src='/Mask group.png' width={320} height={240} className="h-full w-auto absolute top-0 left-0 z-0 transition-all"  alt="bottle" /> 
-                            <Image src='/droplet-transparent.png' width={320} height={240} className="scale-125 h-full w-auto absolute top-0 left-0 z-0 transition-all"  alt="bottle" />
-                          </>
-                        )
-                      }
                       <Image src={item.src} width={320} height={240} className={`${i == 1 && '-rotate-12'} h-full w-auto relative z-10 transition-all`} alt="bottle" /> 
                     </div>
 
