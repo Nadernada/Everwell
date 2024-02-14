@@ -18,7 +18,7 @@ const DiscoverProduct = () => {
     >
       <div className="flex flex-col justify-center gap-y-12 lg:p-12">
         <p className={myFont.className + ' text-white text-[32px] lg:text-[64px] leading-[38px] lg:leading-[72px]'}>Discover Your Ideal<br/><span className='font-bold'>EverWell Product</span></p>
-        <Button title="Take the Quiz" className="bg-white text-primary outline-none" />
+        <Button title="Take the Quiz" className="bg-white hover:outline-2 hover:outline-white hover:text-white  text-primary outline-none" />
       </div>
       <div className="lg:w-1/2 flex items-center">
         <Image src='/IdealProduct.svg' alt="Ideal Product" width={580} height={506} />

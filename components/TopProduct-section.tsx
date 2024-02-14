@@ -35,7 +35,7 @@ const TopProduct = () => {
           pagination={true}
           className="w-full overflow-visible xl:max-w-[1556px] flex justify-center"
         >
-          <SwiperSlide className="w-full flex flex-col lg:flex-row lg:items-center justify-center gap-y-12">
+          <SwiperSlide className="w-full flex flex-col lg:flex-row lg:items-center justify-center px-8 lg:px-0 gap-y-12">
             {
               ({ isActive }) => {
                 isActive ? setBgColor('from-yellow-200') : null
@@ -52,7 +52,7 @@ const TopProduct = () => {
                       <Button title="Buy Now" fill className="mt-4 lg:mt-12"/>
                     </motion.div>
 
-                    <Image src='/TopProductGold.webp' alt="bottle" width={640} height={650} className="w-[350px] lg:w-[640px] ms-auto"/>
+                    <Image src='/TopProductGold.webp' alt="bottle" width={640} height={650} className="w-[350px] lg:w-[640px] lg:ms-auto"/>
                   </div>
                 )
               }

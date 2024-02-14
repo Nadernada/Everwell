@@ -38,7 +38,7 @@ const SuccessStories = () => {
             >
               <Image src={item} alt='person' width={340} height={400} className={`relative z-0 ${i == 0 ? 'lg:rounded-l-2xl' : i == 3 ? 'lg:rounded-r-2xl' : ''}`}/>
               <div className="group-hover:opacity-100 opacity-0 bg-gray-500/40 absolute top-0 left-0 z-10 w-full h-full flex items-end justify-center pb-6 transition-all">
-                <Button title="Read More" className="bg-white text-primary outline-none cursor-pointer" />
+                <Button title="Read More" className="bg-white hover:text-white text-primary outline-none cursor-pointer" />
               </div>
             </motion.div>
           ))

@@ -19,7 +19,7 @@ const Navbar = () => {
         <Image src={isOpen ? '/icons/close.svg' : '/icons/menuIcon.svg'} alt='menu' width={30} height={30} className="cursor-pointer hover:opacity-60 transition-all z-20" onClick={() => setIsOpen(!isOpen)} />
       </div>
 
-      <Image src={isOpen ? '/LogoBig.svg' : '/Logo.svg'} width={130} height={30} alt="logo"/>
+      <Image src={isOpen ? '/LogoBig.svg' : '/Logo.svg'} width={130} height={30} alt="logo" className="z-20"/>
 
       <Link href={'/'} className={`lg:hidden ${isOpen ? 'text-white' : ''} z-20`}>Cart (0)</Link>
 

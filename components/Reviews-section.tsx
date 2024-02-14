@@ -43,7 +43,7 @@ const Reviews = () => {
         >
           <p className={myFont.className + ' font-bold text-primary text-[28px] lg:text-[48px] leading-[38px] lg:leading-[58px]'}>Echoes of Wellness: Dive into the EverWell Experience through Customer Reviews.</p>
 
-          <Button title="View All" className="bg-white text-primary outline-none" />
+          <Button title="View All" className="bg-white text-primary hover:text-white outline-none" />
         </motion.div>
 
         <div className="grid grid-cols-3 grid-rows-3 bg-gray-100">

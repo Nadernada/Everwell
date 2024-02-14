@@ -55,7 +55,7 @@ export const Cards = ( {className}: CardsProps) => {
                   )
                 }
                 <div className={`w-full h-[285px] relative flex items-center ${i!==1 ?'justify-center lg:justify-end lg:group-hover:justify-center' : 'justify-center'}`}>
-                  <Image src={item.bg} width={320} height={240} className="lg:group-hover:opacity-100 lg:opacity-0 lg:h-full lg:w-auto h-auto w-full absolute top-4 lg:top-0 z-0 transition-all scale-75 lg:scale-110"  alt="bottle" /> 
+                  <Image src={item.bg} width={320} height={240} className="lg:group-hover:opacity-100 lg:opacity-0 lg:h-full lg:w-auto h-auto w-full absolute lg:top-0 z-0 transition-all scale-75 lg:scale-110"  alt="bottle" /> 
                   <Image src={item.srcConShadow} width={320} height={240} className="hidden lg:inline lg:group-hover:hidden h-full w-auto relative z-10 transition-all" alt="bottle" /> 
                   <Image src={item.src} width={320} height={240} className={`lg:hidden lg:group-hover:inline h-full w-auto relative z-10 ${i==1 ? 'lg:group-hover:-rotate-[10deg] -rotate-[10deg] lg:-translate-x-5 scale-[85%] lg:scale-100' : ' lg:group-hover:rotate-[10deg] rotate-[10deg] lg:translate-x-5 scale-[85%] lg:scale-100'} lg:translate-y-[-50px]  transition-all duration-200`} alt="bottle" /> 
                 </div>
@@ -75,7 +75,7 @@ export const Cards = ( {className}: CardsProps) => {
                       </>
                     )
                   }
-                  <Button title="Add to Cart" className="group-hover:opacity-100 opacity-0 text-xs px-6 py-2 outline-[1px] ms-auto transition-all"/>
+                  <Button title="Add to Cart" className="group-hover:opacity-100 hover:text-white opacity-0 text-xs px-6 py-2 outline-[1px] ms-auto transition-all"/>
                 </div>
               </div>
           )

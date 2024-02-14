@@ -44,7 +44,7 @@ const SocialFeed = () => {
         }
       </div>
 
-      <Button title="Follow Us" fill className="hidden lg:flex" />
+      <Button title="Follow Us" fill className="hidden lg:flex !hover:text-black" />
     </motion.div>
   )
 }

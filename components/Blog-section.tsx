@@ -53,7 +53,7 @@ const Blog = () => {
                 <p>27/10/2023</p>
               </div>
 
-              <p className="text-sm lg:text-lg font-bold">{blog.title.length > 52 ? (blog.title.slice(0,52) + '...') : blog.title}</p>
+              <p className="text-sm lg:text-base font-bold">{blog.title.length > 52 ? (blog.title.slice(0,52) + '...') : blog.title}</p>
             </motion.div>
           </motion.div>
         ))

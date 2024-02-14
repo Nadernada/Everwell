@@ -82,13 +82,13 @@ const Hero = () => {
             products.map((item: any, i: number) => 
               (i === 0) ? (
                 <motion.div initial={{ opacity: 0, scale: 1.1 }} whileInView={{ opacity: 100, scale: 1 }} key={i} className="flex flex-col justify-center items-center text-center lg:pt-20 w-full lg:w-6/12 relative transition-all">
-                  <Image src={item.bg} priority={true} height={460} width={440}  alt="bg" className="absolute z-0 top-0 left-0" />
+                  <Image src={item.bg} priority={true} height={460} width={440}  alt="bg" className="absolute z-0 top-0 lg:left-0" />
                   {/* <Image src={item.droplet} height={460} width={440}  alt="bg" className="absolute z-10" /> */}
-                  <Image src={item.src} priority={true} height={400} width={127}  alt="bottle" className={`relative z-20 main-product ${item.bg === '/pink-bg.webp' ? '-rotate-12 lg:-translate-x-[60px] lg:translate-y-20  ' : item.bg === '/blue-bg.webp' ? 'rotate-[10deg] lg:translate-x-[10px]' : 'rotate-12'} translate-x-0 lg:-translate-y-24 duration-300 transition-all`} />
+                  <Image src={item.src} priority={true} height={400} width={127}  alt="bottle" className={`relative z-20 main-product ${item.bg === '/pink-bg.webp' ? '-rotate-12 lg:-translate-x-[60px]   ' : item.bg === '/blue-bg.webp' ? 'rotate-[10deg] lg:translate-x-[10px]' : 'rotate-12'} translate-x-0 lg:-translate-y-24 duration-300 transition-all`} />
     
                   <h3 className={`text-2xl text-primary font-bold z-20 ${myFontMedium.className} mt-12 lg:mt-0`}>{item.minTitle}</h3>
                   <p className="text-lg pb-4">Only for $30</p>
-                  <Button title="Add to Cart" className="outline-black text-black px-6 py-2 text-xs mb-2" />
+                  <Button title="Add to Cart" className="outline-black text-black hover:text-white px-6 py-2 text-xs mb-2" />
                 </motion.div>
               ) : (
                 <div key={i} className="hidden lg:flex flex-row items-center justify-center gap-x-6">
@@ -105,7 +105,7 @@ const Hero = () => {
                     <>
                       <h3 className={`text-2xl text-primary font-bold mt-auto ${myFont.className}`}>{item.minTitle}</h3>
                       <p className="text-lg pb-4">Only for $30</p>
-                      <Button title="Add to Cart" className="outline-black text-black px-6 py-2 text-xs" />
+                      <Button title="Add to Cart" className="outline-black text-black hover:text-white px-6 py-2 text-xs" />
                     </>
                   </div>
                 </div>              
@@ -113,7 +113,7 @@ const Hero = () => {
             )
           }
 
-            <div className="swiper-button-next me-6 lg:me-24 cursor-pointer" onClick={handleNext}>
+            <div className="swiper-button-next me-6 lg:me-24 cursor-pointer !visible" onClick={handleNext}>
               <Image src='/icons/right-arrow.svg' alt="arrow" width={16} height={16} className="lg:hover:scale-150 scale-150 transition-all scale" />
             </div>
         </motion.div>
